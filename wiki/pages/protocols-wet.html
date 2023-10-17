@@ -1,0 +1,467 @@
+{% extends "layout.html" %} {% block page_content %}
+<div class="bg">
+  <img
+    src="https://static.igem.wiki/teams/4838/wiki/wet-lab/wl-protocols.png"
+    class="background-img"
+    style="width: 100%; height: 100%"
+  />
+</div>
+<div class="main-container">
+  <div class="buttons">
+    <button id="btn1" class="button1">Isothermal titration calorimetry</button>
+    <button id="btn2" class="button3">Electrochemical Aptasensor</button>
+  </div>
+  <div class="tab">
+    <div class="divA" id="divA">
+      <div class="wrapper-main">
+        <div class="left-side">
+          <nav class="nav1">
+            <h6 class="heading-nav">Protocol-ITC</h6>
+            <div class="sidebar">
+              <div>
+                <a class="side-items" href="#sample">Sample Preparation</a>
+              </div>
+              <div>
+                <a class="side-items" href="#washing">Washing calorimeter</a>
+              </div>
+              <div>
+                <a class="side-items" href="#one">Protocol 1</a>
+              </div>
+              <div>
+                <a class="side-items" href="#two">Protocol 2</a>
+              </div>
+              <div>
+                <a class="side-items" href="#data">Data Analysis</a>
+              </div>
+              <div>
+                <a class="side-items" href="#ref">References:</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-side">
+          <section id="sample" class="section">
+            <div class="heading">Sample Preparation</div>
+            <div class="paragraph">
+              1)Sample preparation is the most crucial step in ITC. The initial
+              quantities and masses of aptamer and lactoferrin are noted.
+            </div>
+            <div class="paragraph">
+              2)20mM Sodium Phosphate buffer(pH 7.4) is prepared from a stock
+              solution of 55mM Sodium Phosphate and used as standard ITC buffer
+              after taking in advice of P.hD in structural biology, Kunal
+              Dhankar[1]. This was done as both DNA aptamers and protein are
+              relatively large and act as macromolecules and thus remain stable
+              in the phosphate buffer.
+            </div>
+            <div class="para">
+              3)Stock solution of lactoferrin was produced. Molecular mass of
+              human lactoferrin protein is 80kDa. 4.9 mg of human lactoferrin
+              was weighed using a microbalance. Total moles of lactoferrin
+              61.25nMol. This was added in 200μL of phosphate buffer to produce
+              a solution of 306.25 μM, but lactoferrin did not completely
+              dissolve. This was further diluted by a factor of 5 to completely
+              dissolve lactoferrin in solution. A stock solution of lactoferrin
+              of 61.25 μM was obtained.
+            </div>
+            <div class="paragraph">
+              4)tock solution of DNA aptamer was produced using 3.19 mg of the
+              aptamer ordered from IDT. The molar mass of aptamer was
+              180083.2mg/nmol. Aptamer was mixed with 100μL Nuclease free water
+              and put in a water bath at 95 ℃ for 5 minutes for complete mixing.
+              Concentration of stock solution was obtained at 1760μM. This was
+              further diluted by a factor of 10 to create a working DNA aptamer
+              working solution of 176μM.
+            </div>
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/protocols-itc/1.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+          </section>
+          <section id="washing" class="section">
+            <div class="heading">Washing calorimeter</div>
+            <div class="paragraph">
+              1)The Malvern Microcal PEAQ-ITC machine was washed first using
+              Deionised water 3 times to ensure no contamination in experiment.
+            </div>
+            <div class="paragraph">
+              2)This was followed by washing using the phosphate buffer to allow
+              proper loading of macromolecules.
+            </div>
+            <div class="paragraph">
+              3)All stock solutions were maintained at a pH 7.4 to maintain
+              stability.
+            </div>
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/protocols-itc/2.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+          </section>
+          <section id="one" class="section">
+            <div class="heading">Protocol 1</div>
+            <div class="paragraph">
+              1)40μL of DNA aptamer stock solution (176 μM) was loaded in the
+              primary cell of ITC. Stock solution of Lactoferrin was diluted by
+              a factor of 3.0625 to obtain a working solution of 20 μM. 3OO μL
+              of the Lactoferrin working solution was loaded in a specialized
+              ITC syringe and loaded into the sample cell of ITC
+            </div>
+            <div class="paragraph">
+              2)Reaction Parameters were set as follow
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/protocols-itc/3.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/protocols-itc/4.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+          </section>
+          <section id="two" class="section">
+            <div class="heading">Protocol 2</div>
+            <div class="paragraph">
+              Determination of Binding Affinities: ITC is widely used to measure
+              the binding affinities between various biomolecules, such as
+              proteins, nucleic acids, and small molecules. It can help identify
+              the strength of molecular interactions, which is crucial in drug
+              discovery and understanding biological processes
+            </div>
+            <div class="paragraph">
+              1)40μL of DNA aptamer stock solution (176 μM) was loaded in the
+              primary cell of ITC. Stock solution of Lactoferrin was diluted by
+              a factor of 1.53 to obtain a working solution of 40 μM. 3OO μL of
+              the Lactoferrin working solution was loaded in a specialized ITC
+              syringe and loaded into the sample cell of ITC
+            </div>
+            <div class="paragraph">
+              2)Reaction Parameters were set as follow
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/protocols-itc/5.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+          </section>
+          <section id="data" class="section">
+            <div class="heading">Data analysis</div>
+            <div class="paragraph">
+              Data analysis was done using the MicroCal PEAQ-ITC analysis
+              software.
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/protocols-itc/6.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+          </section>
+          <section id="ref" class="section">
+            <div class="heading">References:</div>
+            <div class="paragraph">
+              1) https://pubmed.ncbi.nlm.nih.gov/30929239/
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="divB" id="divB" style="display: none">
+      <div class="wrapper-main">
+        <div class="left-side">
+          <nav class="nav1">
+            <h6 class="heading-nav">Electrochemical Sensing</h6>
+            <div class="sidebar">
+              <div>
+                <a class="side-items" href="#reduction">Aptamer Reduction</a>
+              </div>
+              <div>
+                <a class="side-items" href="#solution">Solution Preparation:</a>
+              </div>
+              <div>
+                <a class="side-items" href="#f1">Aptasensor Fabrication#1:</a>
+              </div>
+              <div>
+                <a class="side-items" href="#f2">Aptasensor Fabrication#2:</a>
+              </div>
+              <div>
+                <a class="side-items" href="#studies">Preliminary Studies</a>
+              </div>
+              <div>
+                <a class="side-items" href="#es"
+                  >Electrochemical Response Studies</a
+                >
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-side">
+          <section class="section" id="reduction">
+            <div class="heading">Aptamer Reduction</div>
+            <div class="paragraph">
+              1μmole thiolated aptamer was ordered as a single-stranded custom
+              DNA oligo from IDT. Purified by Standard Desalting, the DNA
+              arrived dry, 10.62mg (MW=18398.1) . Thiolated aptamers (Mod. Code:
+              /5ThioMC6-D/) are shipped in their oxidized form, to protect the
+              sulfur groups. The disulfide bond requires chemical reduction with
+              Dithiothreitol (DTT) so the free thiol groups can bind to the
+              AuSPE surface.
+            </div>
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/wetlab-protocols-electrochemical/img1.png"
+                alt=""
+                width="100% ; height:100%;"
+              />
+            </div>
+
+            <div class="heading">PROCEDURE</div>
+            <div class="paragraph2">Lactoferrin (lF) Solutions:</div>
+            <div class="paragraph">
+              10mg of lF was weighed and dissolved in 1ml PBS to form 10mg/ml
+              primary stock soln, and then diluted to 20μg/ml, 10ml, secondary
+              stock.
+            </div>
+            <div class="paragraph">
+              From this, 500μL dilutions were calculated and prepared in PBS for
+              concentrations: 16μg/ml, 14μg/ml, 12μg/ml, 10μg/ml, 8μg/ml,
+              6μg/ml, 4μg/ml, 2μg/ml, 1μg/ml, 0.5μg/ml, and 0.1μg/ml.
+            </div>
+            <div class="paragraph2">Mercaptohexanol:</div>
+            <div class="paragraph">
+              1.468μL of MCH was dissolved in 998.632μL of PBS to form 10mM, 1ml
+              primary stock.
+            </div>
+            <div class="paragraph">This was diluted to form 1mM, 10ml soln</div>
+            <div class="paragraph2">Aptamer Soln.:</div>
+            <div class="paragraph">
+              The 100 μM reduced aptamer solution was dissolved in PBS to form
+              5μM aptamer solution
+            </div>
+          </section>
+          <section class="section" id="solution">
+            <div class="heading">Solution Preparation</div>
+            <div class="paragraph">
+              Lactoferrin was purchased from Sigma Aldrich (L4040) and arrived
+              as a solid powder. Biomarker (Lactoferrin) dilutions within and
+              exceeding the required detection range (4.78-10.24μg/mL), Aptamer
+              Soln., and Mercaptohexanol (which arrived as a pure liquid,
+              MW=134.24 g/mol, density= 0.981 g/ml) for backfilling/blocking the
+              electrode were prepared.
+            </div>
+            <!-- image -->
+            <div class="pararaph2">
+              PROCEDURE
+
+              <div class="paragraph2">Lactoferrin (lF) Solutions:</div>
+              <div class="paragraph">
+                10mg of lF was weighed and dissolved in 1ml PBS to form 10mg/ml
+                primary stock soln, and then diluted to 20μg/ml, 10ml, secondary
+                stock.
+              </div>
+              <div class="paragraph">
+                From this, 500μL dilutions were calculated and prepared in PBS
+                for concentrations:
+              </div>
+              <div class="paragraph">
+                16μg/ml, 14μg/ml, 12μg/ml, 10μg/ml, 8μg/ml, 6μg/ml, 4μg/ml,
+                2μg/ml, 1μg/ml, 0.5μg/ml, and 0.1μg/ml
+              </div>
+            </div>
+            <div class="paragraph2">Mercaptohexanol:</div>
+            <div class="paragraph">
+              1.468μL of MCH was dissolved in 998.632μL of PBS to form 10mM, 1ml
+              primary stock.
+            </div>
+            <div class="paragraph">
+              This was diluted to form 1mM, 10ml soln.
+            </div>
+            <div class="paragraph2">Aptamer Soln.:</div>
+            <div class="paragraph">
+              The 100 μM reduced aptamer solution was dissolved in PBS to form
+              5μM aptamer solution
+            </div>
+          </section>
+          <section class="section" id="f1">
+            <div class="heading">Aptasensor Fabrication#1</div>
+            <div class="paragraph">
+              AuSPEs are first cleaned and pre-treated to ensure uniform
+              surfaces. The Self–Assembly-Monolayer (SAM) on an aptasensor
+              consists of Aptamer + Backfilled MCH.
+            </div>
+            <!-- image -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/wetlab-protocols-electrochemical/img2.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">STEPS</div>
+            <div class="paragraph">
+              Electrochemical Cleaning of Au-SPEs:
+              <br />
+              3 Cyclic Voltammetry Scans were performed in 0.5M H2SO4 (6, 10,
+              and 6 scans in each run).
+              <br />
+              Scan Rate: 0.1 V/s, Range: -0.2V-1.2V.
+              <br />
+              It was rinsed with water and dried each time.
+              <br />
+              5μL of 5μM aptamer solution was drop-casted on the Working
+              Electrode region of the SPE.
+              <br />
+              The electrodes were incubated for 16hrs.
+              <br />
+              The electrodes were washed in PBS to remove any excess unbound
+              aptamers and then blocked with 1mM MCH.
+              <br />
+              They were incubated for another hour and then washed with PBS
+              again (to remove excess MCH)
+            </div>
+          </section>
+          <section class="section" id="f2">
+            <div class="heading">Aptasensor Fabrication#2</div>
+            <div class="paragraph">
+              AuSPEs are first cleaned and pre-treated to ensure uniform
+              surfaces. The Self–Assembly-Monolayer (SAM) on an aptasensor
+              consists of Aptamer + Dithiothreitol + Backfilled MCH. Here, DTT +
+              Aptamer were co-immobilized in a 1:10 ratio, while MCH was used as
+              a blocking agent.
+            </div>
+            <!-- image -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/wetlab-protocols-electrochemical/img3.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">STEPS</div>
+            <div class="paragraph">
+              Electrochemical Cleaning of Au-SPEs: <br />
+              3 Cyclic Voltammetry Scans were performed in 0.5M H2SO4 (6, 10,
+              and 6 scans in each run). <br />
+              Scan Rate: 0.1 V/s, Range: -0.2V-1.2V. <br />
+              It was rinsed with water and dried each time. <br />
+              The immobilization solution consisted of 5μM, 250μL DNA + 500μM,
+              25μL DTT, effectively a mole ratio of 1:10. <br />
+              5μL of the solution was drop-casted on the Working Electrode
+              region of the SPE. <br />
+              The electrodes were incubated for 16hrs. <br />
+              The electrodes were washed in PBS to remove any excess unbound
+              aptamers and then blocked with 1mM MCH. <br />
+              They were incubated for another hour and then washed with PBS
+              again (to remove excess MCH)
+            </div>
+          </section>
+          <section class="section" id="studies">
+            <div class="heading">Preliminary Studies</div>
+            <div class="paragraph">
+              Scan Rate Studies and Electrode Studies were conducted to verify
+              the reproducibility and stability of the fabricated aptasensors.
+              These are also done to select the stable electrodes for further
+              Analyte Sensing/Electrochemical Response Studies.
+            </div>
+
+            <div class="paragraph2">STEPS</div>
+            <div class="paragraph2">Scan Rate Study:</div>
+            <div class="paragraph">
+              The SPE was connected to the Metrohm AUTOLAB PGSTAT101
+              Potentiostat which was interfaced with Nova 2.1.6 Software. <br />
+              50μL PBS 7.4 with 5 mM [Fe(CN)6]3−/4− electrolyte was dropped on
+              the electrode, such that the working region and counter electrode
+              were completely covered. <br />
+              Cyclic Voltammetry specifications were set to: -0.8V - 0.8V, 2
+              scans. <br />
+              The scan rate was varied from 0.01 to 0.1 V/s at 0.01 increments
+              and run, on the same electrode after its stability was
+              established. <br />
+              The second scan’s plot was recorded (as the first scan is for
+              equilibration only) using Windower, and excel files were exported
+              with the relevant E vs. I data.
+            </div>
+            <div class="paragraph2">Electrode Study:</div>
+            <div class="paragraph">
+              A bare SPE was taken as a control and CV and DPV were run on both
+              of them. <br />\ 50μL PBS 7.4 with 5 mM [Fe(CN)6]3−/4− electrolyte
+              was used. <br />
+              Cyclic Voltammetry specifications were set to: -0.8V - 0.8V, 2
+              scans, 0.05V/s scan rate. <br />
+              DPV was set to the same potential window (-0.8V - 0.8V). <br />
+              Relevant data was exported and plotted.
+            </div>
+          </section>
+          <section class="section" id="es">
+            <div class="heading">Electrochemical Response Studies</div>
+            <div class="paragraph">
+              Analytes were sensed at prepared concentrations to understand and
+              model the behavior of the Fabricated Biosensor.
+            </div>
+
+            <div class="paragraph2">STEPS</div>
+            <div class="paragraph">
+              The SPE was connected to the Metrohm AUTOLAB PGSTAT101
+              Potentiostat which <br />
+              was interfaced with Nova 2.1.6 Software. <br />
+              50μL PBS 7.4 with 5 mM [Fe(CN)6]3−/4− electrolyte was dropped on
+              the electrode, <br />
+              such that the working region and counter electrode were completely
+              covered. <br />
+              Each sample concentration of lactoferrin was dropped onto their
+              respective electrode <br />
+              and the electrochemical processes were performed almost
+              immediately after each. <br />
+              Cyclic Voltammetry specifications were set to: -0.8V - 0.8V, 2
+              scans, 0.05V/s scan rate . <br />
+              DPV was set to the same potential window (-0.8V - 0.8V) and DPV
+              plots were used for sensing studies. <br />
+              Relevant data was exported and plotted.
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var btn_1 = document.getElementById("btn1");
+  var btn_2 = document.getElementById("btn2");
+  var div_a = document.getElementById("divA");
+  var div_b = document.getElementById("divB");
+  btn_1.addEventListener("click", () => {
+    div_a.style.display = "block";
+    div_b.style.display = "none";
+    btn_2.style.background = "#EAEAEA";
+    btn_2.style.color = "#C83396";
+    btn_1.style.background = "#C83396";
+    btn_1.style.color = "#EAEAEA";
+  });
+  btn_2.addEventListener("click", () => {
+    div_b.style.display = "block";
+    div_a.style.display = "none";
+    btn_1.style.background = "#EAEAEA";
+    btn_1.style.color = "#C83396";
+    btn_2.style.background = "#C83396";
+    btn_2.style.color = "#EAEAEA";
+  });
+</script>
+{% endblock %}

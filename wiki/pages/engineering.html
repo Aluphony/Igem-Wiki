@@ -1,0 +1,524 @@
+{% extends "layout.html" %} {% block page_content %}
+<div class="bg">
+  <img
+    src="https://static.igem.wiki/teams/4838/wiki/project/engineering.png"
+    class="background-img"
+    style="width: 100%; height: 100%"
+  />
+</div>
+<div class="main-container">
+  <div class="buttons">
+    <button id="btn1" class="button1">Amyloid Beta-42 Simulation</button>
+    <button id="btn2" class="button2">Aptamer Mutation</button
+    ><button id="btn3" class="button3">
+      Optimisation of Electrode Experiments
+    </button>
+  </div>
+  <div class="tab">
+    <div class="divA" id="divA">
+      <div class="wrapper-main">
+        <div class="left-side">
+          <nav class="nav1">
+            <h6 class="heading-nav">Amyloid Beta-42 Simulation</h6>
+            <div class="sidebar">
+              <div>
+                <a class="side-items" href="#overview">Introduction</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">Cycle 1</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">Cycle 2</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-side">
+          <section id="overview" class="section">
+            <div class="heading">Introduction</div>
+            <div class="paragraph">
+              As not much Literature work has been done into the Simulation of
+              Amyloid Beta Structures, 1IYT and 5KK3, we couldn’t guess
+              initially the Simulation time and conditions for the Protein
+              structures, so we conducted a series of experiments to finally
+              understand the simulation parameters.
+            </div>
+          </section>
+          <section id="" class="section">
+            <div class="heading">Cycle 1</div>
+            <div class="paragraph2">Design</div>
+            <div class="paragraph">
+              We obtained the 2-D and 3-D structures of Aptamer, and docked them
+              with the respective proteins using HADDOCK, wherein we found the
+              most energetically favorable Clusters on which we are planning to
+              do MD simulations. We firstly run the simulations on Protein 1IYT,
+              independently.
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img1.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">Build</div>
+            <div class="paragraph">
+              We generate the input files for MD simulations of the 1IYT
+              Protein, using CHARMM-GUI, where we set up the MD conditions with
+              generated Grid Box, and 0.15 M KCl solution, and hence we obtain
+              the GROMACS input files, in .mdp format, along with the Topology
+              files.
+            </div>
+            <div class="paragraph2">Test</div>
+            <div class="paragraph">
+              We initially set the simulation time to be 125 ns. We run the
+              Energy Minimization Run, NVT, NPT and finally the Molecular
+              Dynamics run, and hence we obtain the results, through which we
+              create a MD movie, and finally run the commands for RMSD, RMSF,
+              H-bond and Radius of Gyration Analysis.
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img2.jpg"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            
+            <div class="paragraph2">Learn</div>
+            <div class="paragraph">
+              After analyzing the results, We understood that Protein stabilizes
+              in the region of 50 ns - 100 ns, after that protein undergoes
+              spikes in its RMSD and Gyration radius, hence we could run our MD
+              Simulation for the time of 100 ns in case of 1IYT which is small
+              and 50 ns in case of 5KK3, which is large in shape.
+            </div>
+          </section>
+          <section id="" class="section">
+            <div class="heading">Cycle 2</div>
+            <div class="paragraph2">Design</div>
+            <div class="paragraph">
+              After the previous Cycle, we learned the simulation time for the
+              proteins. We pick the best clusters for the proteins, run the
+              GROMACS simulations on it. We pick 50 ns and 100 ns for the docked
+              structures.
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img3.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">Build</div>
+            <div class="paragraph">
+              We set the simulation time 50 ns and 100 ns. We generate the input
+              files for MD simulations of the 1IYT Protein, using CHARMM-GUI,
+              where we set up the MD conditions with generated Grid Box, and
+              0.15 M KCl + + 0.15 M MgCl2 solution, and hence we obtain the
+              GROMACS input files, in .mdp format, along with the Topology
+              files.
+            </div>
+            <div class="paragraph2">Test</div>
+            <div class="paragraph">
+              We set the simulation parameters and run the Energy Minimization
+              Run, NVT, NPT and finally the Molecular Dynamics run, and hence we
+              obtain the results, through which we create a MD movie, and
+              finally run the commands for RMSD, RMSF, H-bond and Radius of
+              Gyration Analysis.
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img4.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img5.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img6.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">Learn</div>
+            <div class="paragraph">
+              As we can see the graphs above, the Simulation for few structures
+              is yielding highly unstable data, at 100 ns simulation time, which
+              indicates we need to study the simulation for a longer time, but
+              we also learned the simulation condition 0.15 M KCl and MgCl2 is
+              an ideal as we are able to significantly reduce the RMSD as
+              compared to first cycle. We need more cycles to fully understand
+              the stability of conformations that are showing thermodynamic
+              stability at higher simulation time.
+            </div>
+            <!-- image gere -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img7.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="heading">References</div>
+            <div class="paragraph">
+              https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6096388/
+            </div>
+            <div class="paragraph">https://www.mdpi.com/1420-3049/21/4/421</div>
+            <div class="paragraph">
+              https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7689369/
+            </div>
+            <div class="paragraph">
+              https://www.frontiersin.org/articles/10.3389/fchem.2023.1144347/full
+            </div>
+            <div class="paragraph">
+              https://pubs.acs.org/doi/pdf/10.1021/ja9719586?src=getftr
+            </div>
+            <div class="paragraph">
+              https://www.sciencedirect.com/science/article/pii/S0039914011004978
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="divB" id="divB" style="display: none">
+      <div class="wrapper-main">
+        <div class="left-side">
+          <nav class="nav1">
+            <h6 class="heading-nav">Aptamer Mutation</h6>
+            <div class="sidebar">
+              <div>
+                <a class="side-items" href="#overview">Introduction</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">Cycle 1</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">Cycle 2</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">References</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-side">
+          <section id="" class="section">
+            <div class="heading">Introduction</div>
+            <div class="paragraph">
+              As we skimmed through the iGEM directory for the part for
+              Lactoferrin Aptamer, for our efforts to make a better part, which
+              shows better affinity for Lactoferrin, as lactoferrin is a protein
+              that is used in multiple places throughout the world. For this, we
+              wanted to do Mutations to the aptamer sequence which are in
+              binding pockets with protein, and analyze the results.
+            </div>
+          </section>
+          <section id="" class="section">
+            <div class="heading">Cycle 1</div>
+            <div class="paragraph2">Design</div>
+            <div class="paragraph">
+              We pick the Aptamer sequence, for Lactoferrin, <br />
+              gcaggacaccgtaacacgggcttttgctttatcgtaccctttatgctagattgtcctgc <br />
+              After analyzing the simulation data for this Aptamer, we make a
+              few nucleotide substitutions and obtain new simulation data.
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img8.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">Build</div>
+            <div class="paragraph">
+              We set the simulation time for 50 ns. For the Mutated Aptamer
+              sequence, we obtain the 2-D and 3-D structure of the Aptamer, and
+              then dock it with Lactoferrin structure using HADDOCK, then we
+              generate the simulation parameter files using CHARMM-GUI, for
+              running the GROMACS simulation.
+            </div>
+            <div class="paragraph2">Test</div>
+            <div class="paragraph">
+              We initially set the simulation time to be 50 ns. We run the
+              Energy Minimization Run, NVT, NPT and finally the Molecular
+              Dynamics run, and hence we obtain the results, through which we
+              create a MD movie, and finally run the commands for RMSD, RMSF,
+              H-bond and Radius of Gyration Analysis.
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img9.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img10.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">Learn</div>
+            <div class="paragraph">
+              We learned from the plots that even after Mutation, the RMSD and
+              Gyration radius values don’t really change much, that means we
+              have to make more directed mutations in this case, with specific
+              targets in various pockets. For that we have to make more
+              simulations and generate more data to improve the Aptamer part.
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="divC" id="divC" style="display: none">
+      <div class="wrapper-main">
+        <div class="left-side">
+          <nav class="nav1">
+            <h6 class="heading-nav">Optimisation of Electrode Experiments</h6>
+            <div class="sidebar">
+              <div>
+                <a class="side-items" href="#overview">Introduction</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">Cycle 1</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">Cycle 2</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">Cycle 3</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">References</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-side">
+          <section id="" class="section">
+            <div class="heading">Introduction</div>
+            <div class="paragraph">
+              The report to report variation in electrochemical sensing, the
+              very nascent stage of aptasensor research and the several
+              different fabrication strategies available makes measuring with
+              Electrochemical Aptasensors a not so straightforward task. We had
+              to iterate through multiple cycles to optimize our protocol
+              design.
+            </div>
+          </section>
+          <section id="" class="section">
+            <div class="heading">Cycle 1</div>
+            <div class="paragraph2">Design</div>
+            <div class="paragraph">
+              Based on our literature review, a preliminary protocol was
+              designed based on using a Self-Assembly-Monolayer (SAM) of
+              Mercaptohexanol (MCH) and Thiolated Aptamer to prevent aptamer
+              fouling and block the remaining electrode[5].
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img11.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">Build</div>
+            <div class="paragraph">
+              The Aptasensor Fabrication Protocol was followed and MCH was
+              backfilled as a blocking agent after aptamer immobilization and
+              incubation overnight. This was then washed with PBS and incubated
+              again before electrochemical analysis was done. Sensing studies
+              with analytes (Lactoferrin, 10μL of all concentrations) were also
+              performed.
+            </div>
+            <div class="paragraph2">Test</div>
+            <div class="paragraph">
+              Both CV and DPV were performed on fabricated electrodes and bare
+              SPEs too. CV results didn’t show much variation, and we weren’t
+              completely satisfied with the DPV results either as we thought we
+              could optimize for a greater difference between the two currents.
+              Some electrodes were giving unstable results as well. The current
+              plots of the analyte sensing studies saturated after two
+              concentrations.
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img12.jpg"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">Learn</div>
+            <div class="paragraph">
+              We interpreted the results to indicate possible fouling and
+              blocking of electrode sites by the aptamer. The unstable
+              electrodes also probably indicated leaching of aptamers (See Notes
+              in Wet Lab Results Section) due to re-oxidation of thiol groups.
+              The saturation of Aptamers with Lactoferrin was possibly due to
+              the volume of Lactoferrin we used being more than available
+              aptamers for binding.
+            </div>
+          </section>
+          <section id="" class="section">
+            <div class="heading">Cycle 2</div>
+            <div class="paragraph2">Design</div>
+            <div class="paragraph">
+              We tried optimizing the protocol for Analyte Sensing Studies by
+              using lesser concentrations of Lactoferrin on each electrode.
+            </div>
+            <div class="paragraph2">Build</div>
+            <div class="paragraph">
+              The same immobilization protocol was followed. Sensing studies
+              were performed using 3μL Lactoferrin on each electrode instead of
+              10μL.
+            </div>
+            <div class="paragraph2">Test</div>
+            <div class="paragraph">
+              Successful sensing studies were performed, with distinct DPV plots
+              in the required range, before reaching saturation current (see
+              Results page).
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img13.jpg"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">Learn</div>
+            <div class="paragraph">
+              For successful detection of our biomarker we would have to either
+              ensure more specific control and studies of sample quantity or
+              optimize our immobilization protocol to have more available
+              aptamers for binding. We were also still unsatisfied with the
+              Aptasensor Fabrication from the first DBTL Cycle.
+            </div>
+          </section>
+          <section id="" class="section">
+            <div class="heading">Cycle 1</div>
+            <div class="paragraph2">Design</div>
+            <div class="paragraph">
+              We decided to try a second immobilization protocol, this time
+              co-immobilizing the initial DTT used to reduce the aptamer along
+              with the aptamer. We had read about SAMs using DTT as well,
+              proving to be more effective than MCH. [6]
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/engineeringsuccess/img14.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">Build</div>
+            <div class="paragraph">
+              The same immobilization protocol was followed except DTT was
+              co-immobilised with DNA:DTT ratio of 1:10. MCH was backfilled as a
+              blocking agent after incubation overnight. This was then washed
+              with PBS and incubated again before electrochemical analysis was
+              done. This time, sensing studies were also performed subsequently.
+            </div>
+            <div class="paragraph2">Test</div>
+            <div class="paragraph">
+              DPV was performed on the fabricated electrodes and bare SPEs. The
+              DPV plots showed a significant increase in current (roughly 72μA).
+              However, on performing analyte studies (with 3μL), it reached
+              saturation current at 1μg/mL itself.
+            </div>
+            <div class="paragraph2">Learn</div>
+            <div class="paragraph">
+              Even though much higher DNA:DTT ratios have been reported, the
+              available aptamers for binding are clearly not sufficient for
+              sensing. Perhaps our overall concentration of aptamer solutions
+              must be optimized. It is possible that DTT was interfering with
+              our sensing studies and not having the desired effect at all. We
+              will continue to optimize these protocols until we can develop
+              reproducible results.
+            </div>
+            <div class="heading">References</div>
+            <div class="paragraph">
+              https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6096388/
+            </div>
+            <div class="paragraph">https://www.mdpi.com/1420-3049/21/4/421</div>
+            <div class="paragraph">
+              https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7689369/
+            </div>
+            <div class="paragraph">
+              https://www.frontiersin.org/articles/10.3389/fchem.2023.1144347/full
+            </div>
+            <div class="paragraph">
+              https://pubs.acs.org/doi/pdf/10.1021/ja9719586?src=getftr
+            </div>
+            <div class="paragraph">
+              https://www.sciencedirect.com/science/article/pii/S0039914011004978
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var btn_1 = document.getElementById("btn1");
+  var btn_2 = document.getElementById("btn2");
+  var btn_3 = document.getElementById("btn3");
+  var div_a = document.getElementById("divA");
+  var div_b = document.getElementById("divB");
+  var div_c = document.getElementById("divC");
+  btn_1.addEventListener("click", () => {
+    div_a.style.display = "block";
+    div_b.style.display = "none";
+    div_c.style.display = "none";
+    btn_2.style.background = "#EAEAEA";
+    btn_1.style.color = "#fff";
+    btn_1.style.background = "#C83396";
+    btn_2.style.color = "#c83396";
+    btn_3.style.background = "#fff";
+    btn_3.style.color = "#c83396";
+  });
+  btn_2.addEventListener("click", () => {
+    div_b.style.display = "block";
+    div_a.style.display = "none";
+    div_c.style.display = "none";
+    btn_1.style.background = "#EAEAEA";
+    btn_2.style.color = "#fff";
+    btn_2.style.background = "#C83396";
+    btn_1.style.color = "#c83396";
+    btn_3.style.color = "#c83396";
+    btn_3.style.background = "#EAEAEA";
+  });
+  btn_3.addEventListener("click", () => {
+    div_b.style.display = "none";
+    div_a.style.display = "none";
+    div_c.style.display = "block";
+    btn_2.style.background = "#EAEAEA";
+    btn_3.style.color = "#fff";
+    btn_3.style.background = "#C83396";
+    btn_2.style.color = "#c83396";
+    btn_1.style.color = "#fff";
+    btn_1.style.color = "#c83396";
+  });
+</script>
+{% endblock %}

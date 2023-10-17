@@ -1,0 +1,132 @@
+{% extends "layout.html" %} {% block page_content %}
+<div>
+  <img
+    src="https://static.igem.wiki/teams/4838/wiki/project/contribution.png"
+    class="background-img"
+    style="width: 100%; height: 100%"
+  />
+</div>
+<div class="wrapper-main">
+  <div class="left-side">
+    <nav class="nav1">
+      <h6 class="heading-nav">Contribution</h6>
+      <div class="sidebar">
+        <div>
+          <a class="side-items" href="#overview"
+            >Standardized Dry-Lab Protocol</a
+          >
+        </div>
+        <div>
+          <a class="side-items" href="#Inspiration"
+            >Characterization of Existing Lactoferrin Aptamer</a
+          >
+        </div>
+        <div>
+          <a class="side-items" href="#Basics"
+            >Optimization of Electrode Protocols</a
+          >
+        </div>
+
+        <div>
+          <a class="side-items" href="#aptamers">Awareness</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="right-side">
+    <section id="overview" class="section">
+      <div class="heading">Standardized Dry-Lab Protocol</div>
+      <div class="paragraph">
+        Molecular Dynamics is an integral tool, can be employed in a variety of
+        modern biological problems, case in point Drug Design, Wet-Lab
+        Experiment Design. With the advent of the powerful “Computer” Era,
+        especially the regularization of particularly notorious Supercomputers,
+        Implementation of Molecular Dynamics Simulations in Biological
+        situations has never been easier.
+      </div>
+      <div class="paragraph">
+        Even though the Time is ripe, the situation at-hand was quite dire. As
+        we progressed through the project, We found the literature and direct
+        material for implementation of Standard Molecular Dynamics Protocols,
+        severely lacking. Even though the Documentation of Softwares like,
+        GROMACS, AMBER, NAMD, have powerful documentation on their source site,
+        For a Newbie getting started with Molecular Dynamics, It’s as helpful as
+        reading a Binary .dat file. Furthermore, MD Simulation cannot be
+        implemented directly, and needs a pipeline of Softwares to conduct
+        Pre-Processing which is imperative for a successful MD run.
+      </div>
+      <div class="paragraph">
+        Nevertheless, we extensively conducted Literature reviews, and spent
+        days browsing though the existing projects, and help develop a
+        Standardized Molecular Dynamics Protocol for implementation of Protein -
+        DNA Aptamer Simulation that includes sequential steps -
+      </div>
+      <div class="paragraph">
+        a) Pre-Docking Processing - Through Chimera, Xiao Lab, MFold <br />
+        b) Docking - Using HADDOCK 2.0.4 WebServer for Protein - Nucleic Acid
+        Docking <br />
+        c) Pre - MD Processing <br />
+        d) MD Input files generation - Using CHARMM-GUI web server <br />
+        e) MD Simulation using - GROMACS
+      </div>
+      <div class="paragraph">
+        In our documentation, we have indicated all the aspects of the above
+        mentioned steps which could be adapted to improve the MD Simulations of
+        various different processes. We have provided the pathway for MD
+        simulations which could be utilized by other teams readily for future
+        projects and research projects.
+      </div>
+      <div class="paragraph">
+        Our struggles while in the Project-Phase prompted us to help share with
+        the scientific community what we learned, and developed through our
+        persistent attempts. We feel delighted we could help in any way
+        possible.
+      </div>
+    </section>
+    <section class="section" id="Inspiration">
+      <div class="heading">
+        Characterization of Existing Lactoferrin Aptamer
+      </div>
+      <div class="paragraph">
+        We found an existing Aptamer part for Lactoferrin in the iGEM registry BBa_K3724005,
+        gcaggacaccgtaacacgggcttttgctttatcgtaccctttatgctagattgtcctgc <br />
+        For which we conducted experiments to characterize its behavior, using
+        ITC and Electrochemical Sensing methods. We obtained various plots that
+        helped us characterize its behavior. This would help future research
+        projects based on Lactoferrin and its Aptamer for which are now
+        complemented with data that was originally lacking. It would help both
+        ongoing and future research projects.
+      </div>
+    </section>
+    <section class="section" id="Basics">
+      <div class="heading">Optimization of Electrode Protocols</div>
+      <div class="paragraph">
+        The variations in each iteration of Electrochemical Sensing, and very
+        intrinsic but a key aspect of designing Aptasensors. It is not a
+        straightforward task in any way. In our engineering part, we had to
+        iterate through many experiments to optimize our Electrodes, so that our
+        results can be consistent. Aptasensors are extremely important in
+        research these days, and through our protocols we established easier
+        Optimization of Electrode Protocols.
+      </div>
+    </section>
+    <section class="section" id="aptamers">
+      <div class="heading">Awareness</div>
+      <div class="paragraph">
+        Our project plays a crucial role in spreading awareness about
+        Alzheimer's disease by offering an innovative and accessible diagnostic
+        tool. By making Alzheimer's screening more convenient and user-friendly,
+        we empower individuals to take charge of their cognitive health and
+        consider early detection. This not only aids in timely intervention but
+        also prompts conversations about Alzheimer's within families and
+        communities, further breaking down the stigma associated with the
+        disease. In providing an effective and easy-to-use tool for early
+        diagnosis, our project actively contributes to raising awareness about
+        Alzheimer's, fostering a better understanding of the disease, and
+        ultimately promoting a proactive approach to managing this significant
+        public health concern.
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}

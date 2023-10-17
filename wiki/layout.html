@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
+
+    <title>{% block title %}{% endblock %} | IIT-Roorkee - iGEM 2023</title>
+
+</head>
+<body>
+  <!-- Navigation -->
+  {% include 'menu.html' %}
+
+  <!-- Page Content -->
+  
+    {% block page_content %}{% endblock %}
+
+    <video id="v0" tabindex="0" autobuffer preload>
+      <source src="{{ url_for('static', filename = 'bottomside.mp4') }}"/>
+      Your browser does not support the video tag.
+    </video>
+    <script>
+      var vid = document.getElementById("v0");
+
+      // Pause video on load
+      vid.pause();
+
+      // Pause video on document scroll (stops autoplay once scroll started)
+      window.onscroll = function () {
+        vid.pause();
+      };
+
+      // Refresh video frames on an interval for smoother playback
+      setInterval(function () {
+        vid.currentTime = window.pageYOffset / 400;
+      }, 40);
+    </script>
+    
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  {% include 'footer.html' %}
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}" ></script>
+  <script src="../static/arrow.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+{% extends "layout.html" %} {% block page_content %}
+<div>
+  <img
+    src="https://static.igem.wiki/teams/4838/wiki/dry-lab/dl-simulation.png"
+    class="background-img"
+    style="width: 100%; height: 100%;"
+  />
+</div>
+<div class="wrapper-main">
+  <div class="left-side">
+    <nav class="nav1">
+      <h6 class="heading-nav">Simulation Analysis</h6>
+      <div class="sidebar">
+        <div>
+          <a class="side-items" href="#RMSD">RMSD</a>
+        </div>
+        <div>
+          <a class="side-items" href="#RMSF">RMSF </a>
+        </div>
+        <div>
+          <a class="side-items" href="#BONDS">H Bonds</a>
+        </div>
+        <div>
+          <a class="side-items" href="#COUNT">Secondary Structure Count</a>
+        </div>
+        <div><a class="side-items" href="#REFERENCES">References</a></div>
+      </div>
+    </nav>
+  </div>
+  <div class="right-side">
+    <section id="overview" class="section">
+      <!-- <div class="heading">What is Docking?</div> -->
+      <div class="paragraph">
+        Root Mean Square Deviation (RMSD) is a widely used metric in molecular
+        docking simulations and structural biology to assess the quality and
+        accuracy of the predicted binding mode or complex structure. RMSD
+        quantifies the structural differences between the predicted or docked
+        structure and a reference or experimental structure, typically a
+        crystallography or NMR-derived structure of the complex.
+      </div>
+      <div class="paragraph">
+        Here's what RMSD represents in terms of molecular docking simulations:
+      </div>
+      <div class="heading" id="RMSD">RMSD</div>
+      <div class="images" style="height: 5rem !important;">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/simulation/simulation1.png"
+          alt=""
+          width="100%"
+        />
+      </div>
+      <div class="paragraph">
+        Quantifying Structural Deviation: RMSD measures the average distance
+        between the corresponding atoms in two structures, with one structure
+        being the reference (usually the experimentally determined one) and the
+        other being the predicted or docked structure. It provides a numerical
+        value that reflects how much the predicted structure deviates from the
+        reference structure.
+      </div>
+      <div class="paragraph">
+        Accuracy Assessment: Lower RMSD values indicate a better agreement
+        between the predicted and reference structures, suggesting a more
+        accurate prediction. Higher RMSD values suggest greater structural
+        deviation and potentially less reliable docking results.
+      </div>
+      <div class="paragraph">
+        Binding Mode Assessment: In the context of molecular docking, RMSD is
+        often used to assess the accuracy of the predicted binding mode. A low
+        RMSD suggests that the predicted binding pose closely resembles the
+        experimental one, indicating a successful docking simulation.
+      </div>
+      <div class="paragraph">
+        Structural Insights: RMSD values can also provide insights into the
+        flexibility or conformational changes of the protein-ligand complex. For
+        instance, a high RMSD might indicate significant conformational changes
+        upon binding.
+      </div>
+    
+     
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/simulation/simulation2.png"
+          alt=""
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="paragraph">
+        In terms of graphs in molecular docking simulations, RMSD is often
+        plotted over time or simulation steps. Such RMSD vs. time plots help
+        researchers monitor the convergence of a molecular dynamics simulation
+        or the stability of a docking trajectory. Typically, the RMSD initially
+        fluctuates as the system equilibrates and then reaches a relatively
+        stable value if the simulation has converged to a representative
+        structure.ed binding modes and the structural dynamics of protein-ligand
+        complexes.
+      </div>
+      <div class="heading" id="RMSF">RMSF</div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/simulation/simulation3.png"
+          alt=""
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="paragraph">
+        Root Mean Square Fluctuation (RMSF) is another important metric used in
+        molecular dynamics simulations and structural biology, particularly for
+        understanding the flexibility and dynamics of biomolecules like
+        proteins. RMSF quantifies the fluctuations or movements of individual
+        atoms or groups of atoms within a molecule over the course of a
+        simulation or in a set of structural snapshots. Here's what RMSF
+        represents in terms of molecular dynamics simulations:
+      </div>
+      <div class="paragraph">
+        1: Fluctuation Assessment: RMSF measures the average fluctuation or
+        deviation of atomic positions from their mean positions. It helps
+        identify regions of a molecule that are highly flexible or undergo
+        significant conformational changes during a simulation.
+      </div>
+      <div class="paragraph">
+        2: Flexibility Analysis: High RMSF values for specific atoms or regions
+        indicate that those parts of the molecule are dynamic and flexible,
+        while low RMSF values suggest rigidity or stability. Understanding the
+        flexibility of different regions in a biomolecule is crucial for
+        studying its function and interactions.
+      </div>
+      <div class="paragraph">
+        3: Conformational Dynamics: RMSF can provide insights into
+        conformational changes or structural rearrangements that occur during a
+        simulation. Peaks in the RMSF plot often correspond to regions that
+        undergo significant structural transitions or fluctuations.
+      </div>
+      <div class="paragraph">
+        4: Binding Site Dynamics: In the context of molecular docking and
+        protein-ligand interactions, RMSF analysis can help identify flexible or
+        dynamic regions near the binding site. Changes in RMSF in these regions
+        may indicate the influence of ligand binding on protein dynamics.
+      </div>
+      <div class="paragraph">
+        Graphs representing RMSF typically display the fluctuation of atomic
+        positions or groups of atoms along the molecule's structure. These plots
+        are valuable for visualizing the flexibility profile of a biomolecule.
+        Peaks in the RMSF graph can highlight specific regions of interest, such
+        as flexible loops, active sites, or regions involved in binding
+        interactions.
+      </div>
+      <div class="heading" id="BONDS">H Bonds</div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/simulation/simulation4.png"
+          alt=""
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="paragraph">
+        Hydrogen bonds (H-bonds) play a crucial role in molecular dynamics (MD)
+        simulation analysis as they are fundamental interactions that influence
+        the structure, stability, and properties of biomolecules and materials.
+        Here are some of the key uses of H-bonds in MD simulation analysis:
+      </div>
+      <div class="paragraph">Structural Analysis: H-bonds can be used to analyze the overall structure of a molecule or material. Researchers can identify and quantify the number of H-bonds formed between specific atoms or groups within the system. This provides insights into the organization and stability of the system.</div>
+      <div class="paragraph">Protein Folding and Stability: In the study of proteins, H-bonds are critical for maintaining the secondary and tertiary structures. MD simulations can track the formation and breaking of H-bonds during protein folding events. The analysis of H-bonds helps in understanding the stability and dynamics of proteins.</div>
+      <div class="paragraph">Ligand Binding: H-bonds are often involved in the binding of ligands to proteins or other receptors. MD simulations can be used to monitor the formation and persistence of H-bonds between the ligand and the binding site. This information is crucial for understanding the binding mechanism and affinity.</div>
+      <div class="paragraph">Solvent-Shell Analysis: In simulations of solvated systems, H-bonds between water molecules and solute molecules (e.g., proteins, ions, or small molecules) are analyzed. This helps researchers understand the solvation shell around a molecule and its impact on the molecule's behavior.</div>
+      <div class="paragraph">Dynamics and Kinetics: H-bond analysis can provide insights into the dynamics and kinetics of processes involving H-bond formation and rupture. For example, it can be used to study the rate at which H-bonds are formed or broken during a chemical reaction or conformational change.</div>
+      <div class="paragraph">Temperature and Pressure Dependence: H-bonds can be sensitive to changes in temperature and pressure. MD simulations at different conditions can reveal how H-bond networks evolve under varying environmental conditions, shedding light on phase transitions or structural changes.</div>
+      <div class="paragraph">Material Properties: In materials science, H-bonds are essential for understanding the properties of materials like polymers and crystal structures. MD simulations can help analyze the strength and dynamics of H-bonds in these materials, which is critical for material design and engineering.</div>
+      <div class="paragraph">Drug Design: For drug discovery, MD simulations can be used to evaluate the stability of H-bonds between potential drug candidates and target proteins. This aids in predicting the binding affinity and designing more effective drugs.</div>
+      <div class="paragraph">Bioinformatics and Structural Biology: H-bond analysis is integral to bioinformatics and structural biology studies. It helps annotate protein structures, predict protein-ligand interactions, and identify potential drug-binding sites.</div>
+      <div class="paragraph">Validation and Comparison: H-bond analysis can be used to validate MD simulations by comparing simulated H-bonds with experimental data, such as X-ray crystallography or NMR. Discrepancies may suggest inaccuracies in the simulation setup or force fields.</div>
+      <div class="paragraph">In summary, H-bonds are a fundamental aspect of molecular interactions, and their analysis in MD simulations is essential for gaining insights into the behavior and properties of biomolecules, materials, and chemical systems. Researchers use H-bond analysis to understand structural stability, dynamics, and the underlying mechanisms of various processes in molecular systems.</div>
+      <div class="heading" id="COUNT">Secondary Structure Count</div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/simulation/simulation5.png"
+          alt=""
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="paragraph">Counting secondary structure elements in molecular dynamics (MD) simulation analysis indicates several important aspects of the behavior and conformational dynamics of biomolecules, such as proteins or nucleic acids:</div>
+      <div class="paragraph">Structural Changes: Changes in the counts of secondary structure elements over time can reveal structural transitions and conformational changes. For example, an increase in alpha-helix content may indicate the formation of a stable alpha helix in a protein during folding or binding events.</div>
+      <div class="paragraph">Stability: A consistent and well-maintained secondary structure throughout the simulation indicates structural stability. This is crucial for understanding the structural integrity of a biomolecule and its functional properties.</div>
+      <div class="paragraph">Transition States: The identification of secondary structure changes can provide insights into the transition states during biological processes. For example, it can help pinpoint when and how a protein transitions from an unstructured state to a structured one.</div>
+      <div class="paragraph">Binding Events: In the context of protein-ligand or protein-protein interactions, counting secondary structure elements can reveal changes in the secondary structure of the binding site or interacting regions. This information is valuable for understanding the molecular recognition and binding mechanisms.</div>
+      <div class="paragraph">Denaturation: Monitoring the loss of secondary structure elements can indicate denaturation or unfolding events, which can be crucial for studying protein stability or unfolding pathways.</div>
+      <div class="paragraph">Comparative Analysis: Comparing the secondary structure counts between different simulations or experimental conditions can provide insights into the effects of mutations, ligand binding, or environmental changes on the biomolecular structure.</div>
+      <div class="paragraph">Dynamics: Changes in secondary structure content over time reflect the dynamic nature of biomolecules. These changes can be analyzed to understand the flexibility and adaptability of the molecule under various conditions.</div>
+      <div class="paragraph">Hydrogen Bonding: Secondary structure elements often rely on hydrogen bonds for stability. Counting H-bonds within or between secondary structure elements can provide further insights into their stability and interactions.</div>
+      <div class="paragraph">Validation: Accurate determination of secondary structure elements in MD simulations can serve as validation for the reliability of the simulation setup and force fields used. Consistency with experimental data or known structures adds credibility to the simulation results.</div>
+      <div class="heading" id="REFERENCES">References:</div>
+      <div class="paragraph"><b>Jeddi I, Saiz L. Three-dimensional modeling of single stranded DNA hairpins for aptamer-based biosensors. Scientific reports. 2017 Apr 26 ; 7 (1) : 1 - 3.</b></div>
+      <div class="paragraph"><b>Stoltenburg R, Krafcikova P, Viglasky V, Strehlitz B. G-quadruplex aptamer targeting Protein A and its capability to detect Staphylococcus aureus demonstrated by ELONA. Scientific reports. 2016 Sep 21 ; 6 (1) : 1 - 2.</b></div>
+      <div class="paragraph"><b>Gupta G, Bansal M, Sasisekharan V. Conformational flexibility of DNA: polymorphism and handedness. Proceedings of the National Academy of Sciences. 1980 Nov 1 ; 77 (11) : 6486 - 90.
+    </b></div>
+      <div class="paragraph"><b>D.A. Case, H.M. Aktulga, K. Belfon, I.Y. Ben-Shalom, S.R. Brozell, D.S. Cerutti, T.E. Cheatham, III, G.A. Cisneros, V.W.D. Cruzeiro, T.A. Darden, R.E. Duke, G. Giambasu, M.K. Gilson, H. Gohlke, A.W. Goetz, R. Harris, S. Izadi, S.A. Izmailov, C. Jin, K. Kasavajhala, M.C. Kaymak, E. King, A. Kovalenko, T. Kurtzman, T.S. Lee, S. LeGrand, P. Li, C. Lin, J. Liu, T. Luchko, R. Luo, M. Machado, V. Man, M. Manathunga, K.M. Merz, Y. Miao, O. Mikhailovskii, G. Monard, H. Nguyen, K.A. O'Hearn, A. Onufriev, F. Pan, S. Pantano, R. Qi, A. Rahnamoun, D.R. Roe, A. Roitberg, C. Sagui, S. Schott-Verdugo, J. Shen, C.L. Simmerling, N.R. Skrynnikov, J. Smith, J. Swails, R.C. Walker, J. Wang, H. Wei, R.M. Wolf, X. Wu, Y. Xue, D.M. York, S. Zhao, and P.A. Kollman (2021), Amber 2021, University of California, San Francisco.</b></div>
+      <div class="paragraph"><b>Oweida TJ, Kim HS, Donald JM, Singh A, Yingling YG. Assessment of AMBER Force Fields for Simulations of ssDNA. Journal of Chemical Theory and Computation. 2021 Jan 12 ; 17 (2) : 1208 - 17.</b></div>
+      <div class="paragraph"><b>Buglak AA, Samokhvalov AV, Zherdev AV, Dzantiev BB. Methods and applications of in silico aptamer design and modeling. International Journal of Molecular Sciences. 2020 Jan ; 21 (22) : 8420.</b></div>
+      <div class="paragraph"><b>Abraham MJ, van der Spoel D, Lindahl E, Hess B, and the GROMACS development team. GROMACS User Manual version 2018. 2018. www.gromacs.org</b></div>
+      <div class="paragraph"><b>Bekker H, Berendsen HJC, Dijkstra EJ, Achterop S, van Drunen R, van der Spoel D, Sijbers A, Keegstra H, Reitsma B, Renardus MKR. Gromacs: A parallel computer for molecular dynamics simulations. In Physics Computing 92 (Singapore, 1993). de Groot, R. A., Nadrchal, J., eds. . World Scientific.</b></div>
+      <div class="paragraph"><b>Avogadro: an open-source molecular builder and visualization tool. Version 1.2.0. Available from: http://avogadro.cc/</b></div>
+      <div class="paragraph"><b>Hanwell MD, Curtis DE, Lonie DC, Vandermeersch T, Zurek E, Hutchison GR. Avogadro: An advanced semantic chemical editor, visualization, and analysis platform. J. Cheminformatics 2012 ; 4 (17). doi: https://doi.org/10.1186/1758-2946-4-17.</b></div>
+      <div class="paragraph">
+        <b>Jo S, Kim T, Iyer VG, Im W. CHARMM-GUI: A Web-based Graphical User Interface for CHARMM. J. Comput. Chem. 2008 ; 29 : 1859 - 65</b>
+      </div>
+      <div class="paragraph"><b>Jo S, Cheng X, Islam SM, Huang L, Rui H, Zhu A, Lee HS, Qi Y, Han W, Vanommeslaeghe K, MacKerell AD Jr., Roux B, Im W. CHARMM-GUI PDB Manipulator for Advanced Modeling and Simulations of Proteins Containing Non-standard Residues. Adv. Protein Chem. Struct. Biol. 2014 ; 96 : 235 - 65</b></div>
+      <div class="paragraph"><b>Stoltenburg R, Schubert T, Strehlitz B. In vitro selection and interaction studies of a DNA aptamer targeting protein A. PloS one 2015 ; 10 (7) : 0134403. doi : 10.1371/journal.pone.0134403.</b></div>
+      <div class="paragraph"><b>Gouda H, Torigoe H, Saito A, Sato M, Arata Y, Shimada I. Three-dimensional solution structure of the B domain of staphylococcal protein A: comparisons of the solution and crystal structures. Biochemistry 1992 ; 31 (40) : 9665 - 72. doi: https://doi.org/10.1021/bi00155a020.</b></div>
+      <div class="paragraph"><b>The PyMOL Molecular Graphics System, Version 1.2r3pre, Schrodinger, LLC.</b></div>
+      <div class="paragraph"><b>Chen, V., Davis, I., & Richardson, D. KING (Kinemage, Next Generation): A versatile interactive molecular and scientific visualization program. Protein Science 2009 ; 18 (11) : 2403 - 9. doi: https://doi.org/10.1002/pro.250.</b></div>
+      <div class="paragraph"><b> Rivas, Lourdes and Mayorga-Martinez, Carmen C. and Quesada-Gonz\'{a}lez, Daniel and Zamora-G\'{a}lvez, Alejandro and de la Escosura-Mu\~{n}iz, Alfredo and Merko\c{c}i, Arben (2015) {Label-Free Impedimetric Aptasensor for Ochratoxin-A Detection Using Iridium Oxide Nanoparticles}.Analytical Chemistry, 150501134921005</b></div>
+      <div class="paragraph"><b>Li, Zheng and Wang, Yijing and Liu, Ying and Zeng, Yongyi and Huang, Aimin and Peng, Niancai and Liu, Xiaolong and Liu, Jingfeng (2013) {A novel aptasensor for the ultra-sensitive detection of adenosine triphosphate via aptamer/quantum dot based resonance energy transfer.}.The Analyst 138, 4732-6</b></div>
+      <div class="paragraph"><b> Zhao, Zhen and Chen, Hongda and Ma, Lina and Liu, Dianjun and Wang, Zhenxin (2015) {A label-free electrochemical impedance aptasensor for cylindrospermopsin detection based on thionine–graphene nanocomposites}.The Analyst 140, 5570-5577</b></div>
+      <div class="paragraph"><b>Luo, Xuemei and McKeague, Maureen and Pitre, Sylvain and Dumontier, Michel and Green, James and Golshani, Ashkan and Derosa, Maria C and Dehne, Frank (2010) {Computational approaches toward the design of pools for the in vitro selection of complex aptamers.}.RNA (New York, N.Y.) 16, 2252-2262</b></div>
+      <div class="paragraph"><b>Hu, Wen-pin and Kumar, Jangam Vikram and Huang, Chun-jen and Chen, Wen-yih (2015) {Computational Selection of RNA Aptamer against Angiopoietin-2 and Experimental Evaluation}. 2015</b></div>
+      <div class="paragraph"><b>Chushak, Yaroslav and Stone, Morley O. (2009) {In silico selection of RNA aptamers}.Nucleic Acids Research 37, 1-9</b></div>
+      <div class="paragraph"><b>Tseng, C. Y. and Ashrafuzzaman, M. and Mane, J. Y. and Kapty, J. and Mercer, J. R. and Tuszynski, J. A. (2011) Entropic fragment-based approach to aptamer design.Chem Biol Drug Des 78, 1-13</b></div>
+    </section>
+  </div>
+</div>
+{% endblock %}

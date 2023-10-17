@@ -1,0 +1,270 @@
+{% extends "layout.html" %} {% block page_content %}
+<div>
+    <img
+      src="https://static.igem.wiki/teams/4838/wiki/dry-lab/dl-docking.png"
+      class="background-img"
+      style="width: 100%;
+      height: 100%;"
+    />
+  </div>
+<div class="wrapper-main">
+  <div class="left-side">
+    <nav class="nav1">
+      <h6 class="heading-nav">Docking</h6>
+      <div class="sidebar">
+        <div><a class="side-items" href="#overview">What is Docking</a></div>
+        <div>
+          <a class="side-items" href="#Inspiration">Pre-docking processing</a>
+        </div>
+        <div>
+          <a class="side-items" href="#Basics">Chimera</a>
+        </div>
+        <div>
+          <a class="side-items" href="#aptamers"
+            >Software We are Using- HADDOCK</a
+          >
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="right-side">
+    <section id="overview" class="section">
+      <div class="heading">What is Docking?</div>
+      <div class="paragraph">
+        Docking is an attempt to find the best matching between two molecules.
+        It predicts the preferred orientation of one ligand when bound in an
+        active site to form a stable complex. Comparing the protein to a lock
+        and the ligand to a key, we find the correct relative orientation of the
+        "key" which will open up the "lock".
+      </div>
+
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/docking/docking-image1.png"
+          alt=""
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="paragraph">
+        It aims to achieve an optimized conformation for both receptor and
+        ligand and the relative orientation between protein and ligand such that
+        the free energy of the overall system is minimized. Successful docking
+        methods search high dimensional spaces effectively and use a scoring
+        function that correctly ranks candidate dockings. The higher the
+        negative value of the score, the higher is the binding affinity of the
+        ligand. Docking involves two types-Rigid (here, the protein can be
+        thought of as the “lock” and the ligand can be thought of as a “key”.
+        Molecular docking may be defined as an optimization problem, which would
+        describe the “best-fit” orientation of a ligand that binds to a
+        particular protein of interest) and Flexible (during the course of the
+        docking process, the ligand and the protein adjust their conformation to
+        achieve an overall "best-fit" and this kind of conformational adjustment
+        resulting in the overall binding is referred to as "induced-fit").
+        Interactions include electrostatic, electrodynamic, steric(entropy),
+        solvent related forces. Stages in docking include target/receptor
+        selection(from PDB) and identification of active site, ligand
+        selection(from online databases) and finally docking(most stable one is
+        selected based on scoring function).
+      </div>
+    </section>
+    <section class="section" id="Inspiration">
+      <div class="heading">Pre-Docking processing</div>
+      <div class="paragraph">
+        Pre-docking processing entails a series of essential preparatory
+        measures preceding the commencement of molecular docking simulations.
+        These measures are fundamental in guaranteeing the precision and
+        trustworthiness of the eventual docking outcomes. The process
+        encompasses a spectrum of pivotal tasks, each serving a distinct role:
+      </div>
+      <div class="paragraph">
+        <b>Ligand Preparation:</b> Ligands, which hold the potential to serve as vital
+        drug candidates, are subjected to meticulous preparation. This
+        encompasses actions such as geometry optimization, energy minimization,
+        and the incorporation of pertinent ionization states, protonation
+        configurations, and tautomeric forms.
+      </div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/docking/docking-image2.png"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="paragraph">
+        <b>Receptor Preparation:</b> Equally crucial is the meticulous preparation of
+        the protein receptor structure. This entails the removal of extraneous
+        water molecules, supplementation of missing atoms or structural
+        segments, assignment of charges, and the optimization of the receptor's
+        overall structure.
+      </div>
+      <div class="paragraph">
+        <b>Binding Site Selection:</b> The accurate identification and demarcation of
+        the binding or active site within the receptor structure assume
+        paramount significance. This selection can draw upon experimental data,
+        known ligand binding sites, or predictive algorithms pinpointing
+        potential binding pockets.
+      </div>
+      <div class="paragraph">
+        <b>Solvent and Ion Considerations:</b> Establishing the appropriate solvent
+        milieu and ionic conditions for the simulation is a vital step, often
+        necessitating the introduction of water molecules and counter ions into
+        the system.
+      </div>
+      <div class="paragraph">
+        <b>Grid Generation:</b> For certain docking methodologies, the creation of a
+        grid encompassing the binding site expedites the exploration of optimal
+        ligand binding orientations and positions.
+      </div>
+      <div class="paragraph">
+        <b>Scoring Function Setup:</b> The configuration of parameters governing the
+        scoring function, a pivotal element in estimating the binding affinity
+        between the ligand and receptor, is meticulously executed.
+      </div>
+      <div class="paragraph">
+        <b>Validation and Quality Checks:</b> Rigorous validation procedures are
+        undertaken to ensure that both the prepared ligand and receptor
+        structures align with chemical norms and are aptly suited for docking
+        simulations.
+      </div>
+      <div class="paragraph">
+        <b>Flexible or Rigid Docking:</b> The decision to incorporate flexibility into
+        either the ligand, receptor, or both components governs whether these
+        entities can undergo motion during the simulation.
+      </div>
+      <div class="paragraph">
+        <b>Initial Setup:</b> The simulation software is initialized with the prepared
+        molecular structures, requisite parameters, and specified options to lay
+        the groundwork for the docking process.
+      </div>
+      <div class="paragraph">
+        The meticulousness of pre-docking processing is instrumental in
+        profoundly impacting the robustness of ensuing docking outcomes.
+        Neglecting this stage can potentially yield misleading or erroneous
+        results, with far-reaching implications for drug discovery endeavors and
+        the comprehension of molecular interactions.
+      </div>
+    </section>
+    <section class="section" id="Basics">
+      <div class="heading">Chimera</div>
+      <div class="paragraph">
+        Chimera, often referred to as UCSF Chimera, is a powerful and
+        widely-used molecular modeling software developed by the Resource for
+        Biocomputing, Visualization, and Informatics at the University of
+        California, San Francisco. It is particularly valuable in the field of
+        computational biology and chemistry for tasks such as molecular
+        visualization, analysis, and interactive manipulation of biomolecular
+        structures.
+      </div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/docking/docking-image3.png"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="paragraph">
+        In the context of molecular docking, Chimera serves as a versatile tool
+        to prepare, visualize, and analyze structures involved in docking
+        simulations. It aids in the preparation of both ligand (small molecule)
+        and receptor (protein) structures before docking. This includes tasks
+        like removing solvent molecules, assigning charges, optimizing
+        structures, and ensuring proper molecular orientations.
+      </div>
+    </section>
+    <section class="section" id="aptamers">
+      <div class="heading">Software We are Using- HADDOCK</div>
+      <div class="paragraph">
+        HADDOCK (High Ambiguity Driven biomolecular DOCKing) is a widely used
+        computational tool and web server designed for the purpose of
+        protein-protein, protein-nucleic acid, and protein-ligand docking. It
+        plays a crucial role in structural bioinformatics and computational
+        biology by predicting the 3D structures of macromolecular complexes and
+        understanding their binding interactions. Here's a short note on
+        HADDOCK, including its uses and functions:
+      </div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/docking/docking-image4.png"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="paragraph2">Uses:</div>
+      <div class="paragraph">
+        <b>Protein-Protein Docking:</b> HADDOCK is primarily employed to predict the
+        binding modes and energetics of protein-protein interactions. This is
+        crucial for understanding various biological processes, such as signal
+        transduction, enzymatic reactions, and immune responses.
+      </div>
+      <div class="paragraph">
+        <b>Protein-Nucleic Acid Docking:</b> It can also be used to study the
+        interactions between proteins and nucleic acids (e.g., DNA or RNA). This
+        is essential for deciphering how proteins interact with genetic
+        material, like transcription factors binding to DNA.
+      </div>
+      <div class="paragraph">
+        <b> Protein-Ligand Docking:</b> HADDOCK can predict the binding modes and
+        affinities of small molecules (ligands) to proteins. This is valuable in
+        drug discovery and the development of therapeutic agents.
+      </div>
+      <div class="paragraph">
+        <b>Flexible Docking:</b> It allows for the incorporation of flexibility in both
+        the ligand and receptor structures. This is crucial since many
+        biological molecules undergo conformational changes upon binding
+      </div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/docking/docking-image5.png"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="paragraph2">Functions:</div>
+      <div class="paragraph">
+        <b>High Ambiguity Driven Docking:</b> HADDOCK uses experimental or
+        bioinformatics-derived data, such as NMR chemical shift perturbation,
+        mutagenesis, or bioinformatics predictions, to guide the docking
+        process. This "high ambiguity" approach helps in better predicting
+        complex structures. Scoring and Energy Minimization: HADDOCK calculates
+        binding energies and ranks the generated models based on a variety of
+        scoring functions. It uses energy minimization techniques to refine the
+        structures and optimize their interactions
+      </div>
+      <div class="paragraph">
+        <b>Cluster Analysis:</b> The server performs cluster analysis on the
+        generated models, helping users identify the most plausible binding
+        modes. This is particularly useful when multiple solutions are obtained.
+      </div>
+      <div class="paragraph">
+        <b>Visualization and Analysis:</b> HADDOCK provides visualization
+        tools to explore and analyze the docking results. Users can
+        interactively inspect the binding interfaces, hydrogen bonds, and other
+        interactions.
+      </div>
+      <div class="paragraph">
+        <b> Accessibility:</b> HADDOCK is available as a web server, making it
+        accessible to researchers worldwide. Users can submit their input files
+        and receive results remotely without the need for extensive
+        computational resources. Integration with Other Tools: It can be
+        integrated with other bioinformatics tools and databases to gather
+        additional information for better-guided docking experiments.
+      </div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/docking/docking-image6.png"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="paragraph">
+        In summary, HADDOCK Docking Server is a versatile computational tool for
+        predicting the structures and energetics of biomolecular complexes. Its
+        ability to incorporate experimental data and its user-friendly web
+        interface make it a valuable resource for researchers in structural
+        biology, drug discovery, and molecular modeling.
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}

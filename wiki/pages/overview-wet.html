@@ -1,0 +1,315 @@
+{% extends "layout.html" %} {% block page_content %}
+<div class="bg">
+  <img src="https://static.igem.wiki/teams/4838/wiki/wet-lab/wl-overview.png" class="background-img"
+    style="width: 100%; height: 100%" />
+</div>
+<div class="main-container">
+  <div class="buttons">
+    <button id="btn1" class="button1">Isothermal titration calorimetry</button> <button id="btn2"
+      class="button3">Aptamer Reduction:</button>
+  </div>
+  <div class="tab">
+    <div class="divA" id="divA">
+      <div class="wrapper-main">
+        <div class="left-side">
+          <nav class="nav1">
+            <h6 class="heading-nav">Overview-ITC</h6>
+            <div class="sidebar">
+              <div>
+                <a class="side-items" href="#overview">Isothermal titration calorimetry</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">Principle of Isothermal Titration Calorimetry</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">How ITC Works:</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">Applications of ITC:</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-side">
+          <section id="overview" class="section">
+            <div class="heading">Isothermal titration calorimetry</div>
+            <div class="paragraph">
+              Isothermal titration calorimetry (ITC) is a powerful analytical
+              technique used in various fields of science, particularly in
+              biochemistry, chemistry, and drug discovery. It is primarily
+              employed to measure the thermodynamic parameters of interactions
+              between molecules in solution. ITC provides valuable information
+              about binding affinity (Kd), enthalpy change (ΔH), entropy change
+              (ΔS), and stoichiometry (n) of binding reactions. Here's a
+              detailed overview of how ITC works and its applications:
+            </div>
+          </section>
+          <section id="" class="section">
+            <div class="heading">
+              Principle of Isothermal Titration Calorimetry (ITC):
+            </div>
+            <div class="paragraph">
+              ITC measures the heat changes associated with a binding reaction
+              that occurs at constant temperature (hence the term "isothermal").
+              The underlying principle relies on the fact that when molecules
+              interact in solution, they can either release heat (exothermic) or
+              absorb heat (endothermic), depending on the nature of the
+              interaction.
+            </div>
+            <!-- image here -->
+            <div class="images"><img src="https://static.igem.wiki/teams/4838/wiki/wetlab-overview-itc/img1.png" alt=""
+                style="width: 100%; height: 100%;"></div>
+            <div class="paragraph">
+              The basic setup of an ITC instrument consists of two chambers: a
+              sample cell and a reference cell. The sample cell contains one of
+              the binding partners (typically the ligand), while the reference
+              cell contains a similar solution without the binding partner. Both
+              cells are kept at the same temperature, and a sensitive
+              calorimeter measures the heat flow between them as the binding
+              reaction progresses.
+            </div>
+          </section>
+          <section id="" class="section">
+            <div class="heading">How ITC Works:</div>
+            <div class="paragraph">
+              Initial Equilibration: The experiment begins with the ligand
+              (typically in the syringe) being titrated into the sample cell
+              containing the macromolecule (usually a protein or nucleic acid).
+              Both cells contain the same buffer to maintain constant
+              conditions.
+            </div>
+            <div class="paragraph">
+              Titration: Small volumes of the ligand solution are injected into
+              the sample cell in a controlled manner, typically in a series of
+              steps. As the ligand mixes with the macromolecule, a binding
+              reaction takes place.
+            </div>
+            <div class="paragraph">
+              Heat Exchange Measurement: Heat is either absorbed or released
+              during the binding reaction, leading to temperature changes in the
+              sample cell. The calorimeter detects these temperature changes and
+              converts them into heat flow data.
+            </div>
+            <div class="paragraph">
+              Data Analysis: The heat flow data are then analyzed to determine
+              the binding parameters, including the binding constant (Kd),
+              enthalpy change (ΔH), entropy change (ΔS), and stoichiometry (n).
+            </div>
+            <!-- image here -->
+            <div class="images"><img src="https://static.igem.wiki/teams/4838/wiki/wetlab-overview-itc/img2.png" alt=""
+                style="width: 100%; height: 100%;"></div>
+          </section>
+          <section id="" class="section">
+            <div class="heading">Applications of ITC:</div>
+            <div class="paragraph">
+              Determination of Binding Affinities: ITC is widely used to measure
+              the binding affinities between various biomolecules, such as
+              proteins, nucleic acids, and small molecules. It can help identify
+              the strength of molecular interactions, which is crucial in drug
+              discovery and understanding biological processes
+            </div>
+            <div class="paragraph">
+              Enzyme Kinetics: ITC can be used to study enzyme-substrate
+              interactions and determine kinetic parameters, such as the
+              Michaelis-Menten constant (Km) and turnover number (kcat).
+            </div>
+            <div class="paragraph">
+              Thermodynamic Studies: ITC provides insights into the
+              thermodynamics of binding reactions, including ΔH and ΔS, which
+              can shed light on the forces driving molecular interactions.
+            </div>
+            <div class="paragraph">
+              Stoichiometry Determination: ITC can determine the stoichiometry
+              of complex formation, i.e., the number of ligand molecules binding
+              to a macromolecule. Screening for Ligand Binding: ITC can be used
+              to screen potential drug candidates for their binding affinity to
+              a target protein, helping in drug development.
+            </div>
+            <div class="paragraph">
+              In summary, isothermal titration calorimetry is a versatile
+              technique that allows researchers to quantitatively study
+              molecular interactions by measuring heat changes during a binding
+              reaction. It is invaluable in understanding the thermodynamics of
+              these interactions, which has wide-ranging applications in
+              biology, chemistry, and pharmaceutical research.
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="divB" id="divB" style="display: none">
+      <div class="wrapper-main">
+        <div class="left-side">
+          <nav class="nav1">
+            <h6 class="heading-nav">Overview</h6>
+            <div class="sidebar">
+              <div>
+                <a class="side-items" href="#introduction">Aptamer Reduction:</a>
+              </div>
+              <div>
+                <a class="side-items" href="#four">Solution Preparation:</a>
+              </div>
+              <div>
+                <a class="side-items" href="#software">Aptasensor Fabrication:</a>
+              </div>
+              <div>
+                <a class="side-items" href="#force">Preliminary Studies:</a>
+              </div>
+              <div>
+                <a class="side-items" href="#force">Electrochemical Response Study:</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-side">
+          <section class="section" id="introduction">
+            <div class="paragraph">
+              As part of our Wet Lab procedures for this project we’ve worked on
+              optimizing the immobilization of our chosen Aptamer for
+              Lactoferrin on Au-SPEs. Subsequently, we performed Electrochemical
+              Response/Analyte Sensing Studies on a range of concentrations
+              which include the Alzheimer’s detection and Healthy Person’s
+              range, with the goal of establishing a linear relationship between
+              the current and concentrations.
+            </div>
+            <div class="paragraph2">Aptamer Reduction:</div>
+            <div class="paragraph">
+              The reduction of thiolated aptamers (that are shipped in an
+              oxidized form to protect the thiol groups) is crucial to making
+              the thiol groups available for binding with the gold surface of
+              the Au-SPE (S-Au bonds). The procedure involves the reduction of
+              disulfide bonds using Dithiothreitol (DTT) and subsequent removal
+              of DTT.
+            </div>
+            <div class="paragraph2">Solution Preparation:</div>
+            <div class="paragraph">
+              The composition and concentration of the buffers and analytes were
+              decided after extensive literature survey and consultation with
+              experts in the field. All solutions, unless stated otherwise, were
+              prepared in PBS Buffer (pH 7.4).
+            </div>
+            <div class="paragraph">
+              Analyte (Lactoferrin)- The reported biomarker’s concentration in
+              saliva for a patient with the risk of developing Alzheimer’s is
+              4.78 + 1.11 μg/mL[1]. Accordingly, a range of 11 solutions of
+              Lactoferrin were prepared for sensing with concentrations ranging
+              from 0.1 - 16 μg/mL.
+            </div>
+            <!-- images is here -->
+            <div class="images"><img src="https://static.igem.wiki/teams/4838/wiki/wetlab-overview-electrochemical/img1.jpg" alt=""
+              style="width: 100%; height: 100%;"></div>
+            <div class="paragraph">
+              Aptamer- After reduction, a 5μM solution of aptamer was prepared
+              for drop casting on the electrode.
+            </div>
+            <div class="paragraph">
+              Mercaptohexanol- This is our chosen blocking agent/SAM component.
+              MCH reduces the fouling properties of aptamers and prevents them
+              from folding and covering the electrode by ensuring they stand
+              upright (steric hindrance) and blocking the remaining electrode
+              (S-Au bonds). A 1mM stock of this was prepared. Most literature
+              recommends a 1:100 DNA:MCH ratio.
+            </div>
+            <!-- image is here -->
+            <div class="images"><img src="https://static.igem.wiki/teams/4838/wiki/wetlab-overview-electrochemical/img2.png" alt=""
+              style="width: 100%; height: 100%;"></div>
+            <div class="paragraph2">Aptasensor Fabrication:</div>
+            <div class="paragraph">
+              Aptasensor fabrication procedures have been tailored based on the
+              outcomes of our preliminary studies. We attempted to refine the
+              immobilization methods and components to enhance the stability and
+              sensitivity of our sensors. Apart from using MCH as a spacer
+              molecule in the SAM we also tried using DTT (1:10). 1mM MCH was
+              backfilled, post aptasensor incubation.
+            </div>
+            <!-- image is here -->
+            <div class="images"><img src="https://static.igem.wiki/teams/4838/wiki/wetlab-overview-electrochemical/img3.jpg" alt=""
+              style="width: 100%; height: 100%;"></div>
+            <div class="paragraph2">Preliminary Studies:</div>
+            <div class="paragraph"></div>
+            <div class="paragraph">
+              Our preliminary studies have served as a screening process,
+              allowing us to identify the most stable and consistent sensors and
+              methods for further experimentation. A scan rate study was
+              conducted and 50mV/s was selected. As per the electrode studies,
+              only sensors exhibiting stable aptasensor currents have been
+              selected for subsequent investigations, ensuring reliability and
+              reproducibility. Differential Pulse Voltammetry (DPV) has been
+              chosen instead of Cyclic Voltammetry (CV) due to its superior
+              signal-to-noise ratio and ability to distinguish between
+              background currents.
+            </div>
+            <!-- image is here -->
+            <div class="images"><img src="https://static.igem.wiki/teams/4838/wiki/wetlab-overview-electrochemical/img4.jpg" alt=""
+              style="width: 100%; height: 100%;"></div>
+            <div class="paragraph2">Electrochemical Response Study:</div>
+            <div class="paragraph">
+              The fundamental principle of an Electrochemical Aptasensor is that
+              the change in conformation on binding with lactoferrin would lead
+              to a change in signal. So, Electrochemical Response
+              Studies/Analyte Sensing Studies have been conducted to validate
+              the aptasensors' performance under various 11 concentrations and
+              different conditions. This helps us plot graphs describing how the
+              aptasensor would behave when dealing with different
+              concentrations. Different spacer choices, analyte volumes, etc.
+              have been tested to ensure meaningful sensing within a specific
+              range.
+            </div>
+            <div class="paragraph">
+              Our Wet Lab procedures are grounded in the data and insights
+              obtained from our results, reflecting our commitment to precision
+              and continual improvement in the development of a reliable
+              aptasensor for the early detection of Alzheimer's disease. This
+              approach underscores our dedication to advancing biosensing and
+              diagnostic procedures.
+            </div>
+            <div class="paragraph">
+              https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5470603/
+            </div>
+            <div class="paragraph">
+              https://www.sciencedirect.com/science/article/pii/S0039914011004978
+            </div>
+            <div class="paragraph">
+              https://www.sciencedirect.com/science/article/pii/S095656630700485X
+            </div>
+            <div class="paragraph">
+              https://www.sciencedirect.com/science/article/pii/S0039914022002521
+            </div>
+            <div class="paragraph">
+              https://www.sciencedirect.com/science/article/pii/S1567539420301729
+            </div>
+            <div class="paragraph">
+              https://www.sciencedirect.com/science/article/pii/S0013468621009348
+            </div>
+            <div class="paragraph">
+              https://pubs.acs.org/doi/pdf/10.1021/ja9719586?src=getftr
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var btn_1 = document.getElementById("btn1");
+  var btn_2 = document.getElementById("btn2");
+  var div_a = document.getElementById("divA");
+  var div_b = document.getElementById("divB");
+  btn_1.addEventListener("click", () => {
+    div_a.style.display = "block";
+    div_b.style.display = "none";
+    btn_2.style.background = "#EAEAEA"
+    btn_2.style.color = "#C83396"
+    btn_1.style.background = "#C83396"
+    btn_1.style.color = "#EAEAEA"
+  });
+  btn_2.addEventListener("click", () => {
+    div_b.style.display = "block";
+    div_a.style.display = "none";
+    btn_1.style.background = "#EAEAEA"
+    btn_1.style.color = "#C83396"
+    btn_2.style.background = "#C83396"
+    btn_2.style.color = "#EAEAEA"
+  });
+</script>
+{% endblock %}

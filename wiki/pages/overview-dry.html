@@ -1,0 +1,47 @@
+{% extends "layout.html" %} {% block page_content %}
+<div>
+    <img src="https://static.igem.wiki/teams/4838/wiki/group-149-6.png" class="background-img"
+        style="width: 100%; height: 100%" />
+</div>
+<div class="wrapper-main">
+    <div class="left-side">
+        <nav class="nav1">
+            <h6 class="heading-nav">Description</h6>
+            <div class="sidebar">
+                <div><a class="side-items" href="#overview">Overview</a></div>
+            </div>
+        </nav>
+    </div>
+    <div class="right-side">
+        <section id="overview" class="section">
+            <div class="heading">Overview</div>
+            <div class="paragraph">
+                Our Dry-Lab basically constitutes three important aspects - Molecular
+                Docking, Molecular Dynamics Simulations and Simulation Analysis of
+                Protein-DNA Aptamer. For Molecular Docking, we firstly conducted
+                Pre-Docking Processing to obtain 2-D, 3-D structure of DNA Aptamer from
+                its sequence, and then conduct docking exercise for the same with
+                Protein using HADDOCK Web server, and its Protein-Nucleic Acid software
+                to conduct the exercise.
+            </div>
+
+            <div class="images">
+                <img src="https://static.igem.wiki/teams/4838/wiki/whatsapp-image-2023-10-12-at-03-43-39-12e1e0af.jpg"
+                    alt="" width="100%" height="100%" />
+            </div>
+            <div class="paragraph">
+                With that, we generate the Input files for the Molecular Dynamics Simulation using GROMACS, with the
+                help of CHARMM-GUI, a HARVARD Web Server, for the above process that includes files for EM run, NVT and
+                NPT run culminating in the MD run.
+                We use GROMACS installed in the Linux-Ubuntu system and adjust the simulation time to 50ns and 100 ns
+                respectively for the larger and shorter proteins respectively.
+                Post-Simulation we analyze the data for RMSD, RMSF, Radius of Gyration, Energy, and H-Bonds along with
+                Secondary Structure count. With the help of these, we can conduct studies for Aptamer-Protein analysis
+                to complement Wet-Lab experiments and conclude the best-Aptamers, confirmations and possible Mutation
+                sites for modified, advanced Aptamers for our POC kit.
+
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,412 @@
+{% extends "layout.html" %} {% block page_content %}
+<div class="bg">
+  <img
+    src="https://static.igem.wiki/teams/4838/wiki/wet-lab/wl-results.png"
+    class="background-img"
+    style="width: 100%; height: 100%"
+  />
+</div>
+<div class="main-container">
+  <div class="buttons">
+    <button id="btn1" class="button1">Isothermal titration calorimetry</button>
+    <button id="btn2" class="button3">Electrochemical Sensing</button>
+  </div>
+  <div class="tab">
+    <div class="divA" id="divA">
+      <div class="wrapper-main">
+        <div class="left-side">
+          <nav class="nav1">
+            <h6 class="heading-nav"></h6>
+            <div class="sidebar">
+              <div>
+                <a class="heading-nav" href="#overview">Result</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">Protocol 1</a>
+              </div>
+              <div>
+                <a class="side-items" href="#overview">Protocol 2</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-side">
+          <section id="overview" class="section">
+            <div class="heading">Protocol 1:</div>
+            <div class="paragraph">
+              In the first run we started with initial concentrations of DNA
+              aptamers at 176.41 uM and initial concentration of lactoferrin at
+              20mM. Larger amount of aptamer was taken to ensure sufficient
+              number of DNA aptamer molecules were present to bind to the
+              protein
+            </div>
+            <div class="paragraph2">Observation:</div>
+            <div class="paragraph">
+              In the Differential Power vs Time graph, The peak very quickly
+              shifts from exothermic region (below zero DP) to endothermic
+              region(above zero DP), that is the reaction changes from
+              exothermic to endothermic after just two injections (two peaks).
+            </div>
+            <div class="paragraph">
+              △H vs Molar ratio graph is initially unable to fit the starting
+              two injections on the plot. After using the fit function in the
+              Microcal PEAQ-ITC data analysis software, the plot is finally able
+              to fit all points in a satisfactory manner
+            </div>
+            <div class="paragraph">
+              The reaction parameters obtained were as follow
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-itc/img-table-1.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph">
+              ITC experiment produced the following graph
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-itc/img-1.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-itc/img-2.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">b) Inference:</div>
+            <div class="paragraph">
+              Kd value of 1.45 x 10^-9, which signified strong bonding between
+              the aptamer and protein. A total of 8 aptamer molecules were
+              binding to a single lactoferrin molecule, indicating insufficient
+              protein quantity.
+            </div>
+            <div class="paragraph">
+              Despite binding occurring, the reaction becomes endothermic very
+              quickly indication that protein starts denaturing with only a
+              small quantity of Aptamer
+            </div>
+            <div class="paragraph">
+              It was understood that protein quantity must be be increased to
+              avoid denaturing of protein by aptamer quickly
+            </div>
+          </section>
+          <section id="" class="section">
+            <div class="heading">Protocol 2</div>
+            <div class="paragraph">
+              In the second run we started with initial concentrations of DNA
+              aptamers at 176.41 uM and initial concentration of lactoferrin at
+              40mM. Larger amount of lactoferrin was taken to ensure sufficient
+              protein molecules available for aptamer binding and avoid
+              denaturing similar to Protocol
+            </div>
+            <div class="paragraph2">a)Observation:</div>
+            <div class="paragraph">
+              In the Differential Power vs Time graph, The peak shifts from
+              exothermic region (below zero DP) to endothermic region(above zero
+              DP) after some injections.
+            </div>
+            <div class="paragraph">
+              After using the fit function in the Microcal PEAQ-ITC data
+              analysis software, the reaction parameters obtained were as
+              follow:
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-itc/img-table-2.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">
+              ITC experiment produced the following graph
+            </div>
+            <!-- image here -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-itc/img-3.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-itc/img-4.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph2">Inference :</div>
+            <div class="paragraph">
+              The Kd remained the same and binding still occurred,A total of
+              4.03 aptamer molecules were binding to a single lactoferrin
+              molecule
+            </div>
+            <div class="paragraph">
+              △H vs Molar ratio graph fits all points and is balanced. Strong
+              Binding is observed.
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="divB" id="divB" style="display: none">
+      <div class="wrapper-main">
+        <div class="left-side">
+          <nav class="nav1">
+            <h6 class="heading-nav">Overview</h6>
+            <div class="sidebar">
+              <div>
+                <a class="side-items" href="#introduction"
+                  >Aptamer Reduction:</a
+                >
+              </div>
+              <div>
+                <a class="side-items" href="#four">Solution Preparation:</a>
+              </div>
+              <div>
+                <a class="side-items" href="#software"
+                  >Aptasensor Fabrication:</a
+                >
+              </div>
+              <div>
+                <a class="side-items" href="#force">Preliminary Studies:</a>
+              </div>
+              <div>
+                <a class="side-items" href="#force"
+                  >Electrochemical Response Study:</a
+                >
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-side">
+          <section class="section" id="introduction">
+            <div class="heading">Results and Analysis</div>
+            <div class="paragraph2">SCAN RATE STUDY</div>
+            <!-- images -->
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-electrochemical-sensing/img-1.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="paragraph">
+              1. Slightly unstable peak shape on the right end above 60mV/s
+              <br />
+              2. Proceed with 50mV/s (also recommended in literature)
+            </div>
+            <div class="paragraph2">ELECTRODE STUDY</div>
+            <!-- image  -->
+            <div class="images">
+                <img
+                  src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-electrochemical-sensing/img-2.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+              </div>
+              <div class="images">
+                <img
+                  src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-electrochemical-sensing/img-3.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+              </div>
+            <div class="paragraph">
+              1. Cyclic Voltammetry current shows barely any significant
+              changes.
+            </div>
+
+            <div class="paragraph">
+              2. Aptamer Immobilisation on the SPE shows significant rise in
+              current in Differential Pulse Voltammetry, the more sensitive and
+              selective process. DPV shows better signal to noise ratio too, as
+              it can distinguish between background currents. We chose to go
+              ahead with DPV for further studies.
+            </div>
+            <div class="paragraph">
+              3. As shown in subsequent sensing studies, the
+              Aptamer/MCH-Immobilised SPE reproducibly showed an increased
+              current between the 55 and 65μA range, successfully indicating
+              aptasensor fabrication. The Aptamer/MCH/DTT/SPE showed even higher
+              DPV values.
+            </div>
+            <div class="paragraph2">ELECTROCHEMICAL RESPONSE STUDY#1</div>
+            <!-- images is here -->
+            <div class="images">
+                <img
+                  src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-electrochemical-sensing/img-4.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+              </div>
+            <div class="paragraph">
+              1. The black curve labeled DPV corresponds to just the
+              Aptamer/MCH/SPE surface = 55μA (stable aptasensor).
+            </div>
+            <div class="paragraph">
+              2. The corresponding DPV curves on trying to detect 10μL analyte
+              in each electrode clearly reach saturation within the very first
+              concentration (0.1μg/mL) itself.
+            </div>
+            <div class="paragraph">
+              3. All the available aptamers for binding on the electrode surface
+              seem to have been bound to analyte (lactoferrin).
+            </div>
+            <div class="paragraph">
+              4. We decided to proceed with lower analyte volumes (3μL) for
+              subsequent studies.
+            </div>
+            <div class="paragraph2">ELECTROCHEMICAL RESPONSE STUDY#2</div>
+            <div class="images">
+                <img
+                  src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-electrochemical-sensing/img-5.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+              </div>
+            <!-- image is here -->
+            <div class="paragraph">
+              The Aptamer/MCH/DTT/SPE Sensor shows a significantly higher
+              current peak (72μA).
+            </div>
+            <div class="paragraph">
+              Saturation is reached much quicker despite using only 3μL of
+              analyte.
+            </div>
+            <div class="paragraph">
+              An explanation for this is the ratio of DTT:Aptamer used was too
+              high, leading to too few Aptamers binding to the electrode and
+              more DTT binding in the available surface area on the electrode.
+              Therefore there being less Aptamer for the Lactoferrin to bind to.
+            </div>
+            <div class="paragraph">
+              The minute difference between saturation current and aptasensor
+              current indicates that it isn’t possible to conduct any meaningful
+              sensing with the aptasensor within that range.
+            </div>
+            <div class="paragraph2">ELECTROCHEMICAL RESPONSE STUDY#3</div>
+            <div class="images">
+                <img
+                  src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-electrochemical-sensing/img-6.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+              </div>
+            <!-- image here -->
+            <div class="paragraph">
+              The top most green curve is the Aptamer/MCH/SPE Sensor surface
+              with no analyte= 55μA (stable electrode)
+            </div>
+            <div class="paragraph">
+              Eventually, using the Aptamer/MCH/SPE Sensor and 3μL analyte for
+              all concentrations, a clearly and significantly decreasing trend
+              was observed from 0.1-16μg/mL.
+            </div>
+            <div class="paragraph">
+              By 14μg/mL, clearly saturation current (around 40μA) was beginning
+              to be reached again, as the subsequent differences between
+              currents are growing smaller, as indicated in the following zoomed
+              graph:
+            </div>
+            <div class="images">
+                <img
+                  src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-electrochemical-sensing/img-7.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+              </div>
+            <!-- image here -->
+            <div class="paragraph">
+              It is inferred that the conformational changes in the aptamer on
+              binding to Lactoferrin blocks the active sites on the sensor
+              surface or modifies its electrochemical properties such that
+              current steadily decreases with more binding.
+            </div>
+            <div class="paragraph2">LINEARITY STUDY</div>
+            <div class="images">
+                <img
+                  src="https://static.igem.wiki/teams/4838/wiki/wetlab-result-electrochemical-sensing/img-8.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+              </div>
+            <!-- image is here -->
+
+            <div class="paragraph">
+              On plotting our obtained current values against their
+              corresponding concentrations, we were able to establish a linear
+              relationship between the concentrations 4μg/mL and 14μg/mL with an
+              R-Square Value of 0.98801 which is considered excellent and
+              establishes a reliable linear correlation.
+            </div>
+            <div class="paragraph">
+              This range falls well within the required range discussed for
+              Alzheimer’s patient’s saliva (4.78μg/mL of Lactoferrin) versus a
+              healthy person’s saliva (10.24 μg/mL)
+            </div>
+            <!-- image is here -->
+            <div class="paragraph2">NOTE</div>
+            <div class="paragraph">
+              We encountered issues with the stability of several
+              electrodes/fabricated sensors that were discarded due to rapidly
+              changing DPV plots (perhaps due to leaching of the aptamers into
+              the buffer).
+            </div>
+            <div class="paragraph">
+              The electrodes used were the ones that produced stable and
+              constant DPV Values over repeated runs.
+
+              <div class="paragraph">
+                Work needs to be done for creating reproducible results with new
+                batches of electrodes to ensure the stability of electrodes and
+                a reliable immobilization protocol.
+              </div>
+            </div>
+            <div class="paragraph">
+              One possible explanation for the leaching was that the discarded
+              electrodes were mostly from a second batch of immobilization that
+              was done a day after the reduction of the aptamers. Even though
+              they were stored at -20C it is possible that they resolved back
+              into their oxidized form with the disulfide bond, hindering
+              effective immobilization
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var btn_1 = document.getElementById("btn1");
+  var btn_2 = document.getElementById("btn2");
+  var div_a = document.getElementById("divA");
+  var div_b = document.getElementById("divB");
+  btn_1.addEventListener("click", () => {
+    div_a.style.display = "block";
+    div_b.style.display = "none";
+    btn_2.style.background = "#EAEAEA";
+    btn_2.style.color = "#C83396";
+    btn_1.style.background = "#C83396";
+    btn_1.style.color = "#EAEAEA";
+  });
+  btn_2.addEventListener("click", () => {
+    div_b.style.display = "block";
+    div_a.style.display = "none";
+    btn_1.style.background = "#EAEAEA";
+    btn_1.style.color = "#C83396";
+    btn_2.style.background = "#C83396";
+    btn_2.style.color = "#EAEAEA";
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,53 @@
+<nav>
+  <div class="position-absolute top-navbar">
+    <div class="logo">NEURA<span style="color: #FFA6A7;">SENSE</span></div>
+    <div class="navbar-items">
+      <ul class="nav-ul">
+        <li><a class="nav-link">People</a>
+          <ul class="sub-nav">
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='team') }}">Team</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
+          </ul>
+      </li>
+        <li><a class="nav-link " >Project</a>
+          <ul class="sub-nav">
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='description') }}">Description</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='problem') }}">Problem</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='solution') }}">Solution</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='implementation') }}">Implementation</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link">Human Practices</a>
+          
+            <ul class="sub-nav">
+              <li><a class="nav-link sub-items " href="{{ url_for('pages', page='overview-hp') }}">Overview</a></li>
+              <li><a class="nav-link sub-items" href="{{ url_for('pages', page='education') }}">Education</a></li>
+              <li><a class="nav-link sub-items" href="{{ url_for('pages', page='human-practices') }}">Integrated Human Practices</a></li>
+            </ul>
+        </li>
+        <li><a class="nav-link">Wetlab</a>
+          <ul class="sub-nav">
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='overview-wet') }}">Overview</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='protocols-wet') }}">Protocols</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='results-wet') }}">Results</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='safety-wet') }}">Safety</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='proof-wet') }}">Proof of concept</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link">Drylab</a>
+          <ul class="sub-nav">
+            <li><a class="nav-link sub-items " href="{{ url_for('pages', page='overview-dry') }}">Overview</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='protocols') }}">Protocols</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='docking') }}">Docking</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='molecular') }}">Molecular Dynamics</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='simulation') }}">Simulation Analysis</a></li>
+            <li><a class="nav-link sub-items" href="{{ url_for('pages', page='model') }}">Model</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="{{url_for('pages',page='judges')}}" >Judges</a></li>
+      </ul>
+    </div>
+  </div>  
+ </nav> 

@@ -1,0 +1,394 @@
+{% extends "layout.html" %} {% block page_content %}
+<div>
+  <img
+    src="https://static.igem.wiki/teams/4838/wiki/dry-lab/dl-md.png"
+    class="background-img"
+    style="width: 100%;
+    height: 100%;"
+  />
+</div>
+<div class="wrapper-main">
+  <div class="left-side">
+    <nav class="nav1">
+      <h6 class="heading-nav">Molecular Dynamics</h6>
+      <div class="sidebar">
+        <div>
+          <a class="side-items" href="#introduction">Introduction</a>
+        </div>
+        <div>
+          <a class="side-items" href="#four">The Four-Step Process</a>
+        </div>
+        <div>
+          <a class="side-items" href="#software">Software used -GROMACS</a>
+        </div>
+        <div>
+          <a class="side-items" href="#force">Force Fields</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="right-side">
+    <section class="section" id="introduction">
+      <div class="heading">Introduction</div>
+      <div class="paragraph2">What is molecular Dynamics?</div>
+      <div class="paragraph">
+        Molecular dynamics is a method in computational biochemistry used to
+        simulate the behavior of atoms. It treats all atoms as balls connected
+        by springs and completely ignores electrons and no bonds are created or
+        destroyed. In a molecular dynamic simulation, the simulation time is
+        divided up into time steps of equal length with the coordinates of the
+        atoms changing with each time step the force is acting on the atoms and
+        therefore their velocities are calculated from their energy. Atoms will
+        move in a specific direction that best decreases their energy, imagine
+        this as a three-dimensional field where the atom or imaginary balls roll
+        down the direction of the gradient their energy is itself calculated
+        using a potential energy function also called a force field that
+        computes the energy of each atom based on coordinates and structural
+        data as well as a set of defined parameters also called force-field
+        parameters. Most force-field equations can be summed up as follows:
+        total energy of an atom consists of a sum of its energy associated with
+        its bonded interactions as well as the energy from non-bonded
+        interactions. In a molecular dynamic simulation the total energy, i.e
+        the sum of the potential and kinetic energy of the system should remain
+        constant.
+      </div>
+      <div class="paragraph2">MOLECULAR DYNAMIC CYCLE</div>
+      <div class="paragraph">
+        A basic molecular dynamic cycle can be described as follows. First your
+        program reads the coordinate and structural information of your system
+        as well as any initial velocities. Then the atomic energies are
+        calculated using the potential energy function. From these energies, the
+        force acting on each atom is computed; the forces can be used to
+        calculate the acceleration of each atom in a pellet in a particular
+        direction. These are then used to generate new coordinates for each of
+        our atoms as well as their new velocities. The program checks if N, the
+        specified number of time steps, has elapsed. If not, the program repeats
+        the cycle and computes new coordinates for the system. This cycle is
+        repeated until N number of time steps has elapsed at which point the
+        program will write all of its computed data in an output file and
+        terminate.
+      </div>
+      <div class="paragraph2">SYSTEM INFORMATION</div>
+      <div class="paragraph">
+        Then this file is processed. System information is first specified
+        usually in a group of files - a coordinate file such as a pdb or xyz
+        file, a structural file such as a psf or grow file and usually a force
+        field parameter file such as a prm file. Most molecular dynamic
+        simulation programs use an input script where you specify the names of
+        these files or even copy the file information into the actual input
+        script. After having calculated the energy of an atom using a potential
+        energy function, U(x), the force acting on it will be the negative
+        derivative of U(x). Since atoms are not one but three dimensional, the
+        force will be a combined partial derivative of each of the principal
+        axes. Finally Newton's second law is used to calculate the acceleration
+        acting on each atom. This will also depend on atomic mass and therefore
+        the element that each atom is representing. Using the acceleration and
+        an already specified time step duration, for example 1 femtosecond per
+        step, a function is used to calculate the new atomic coordinates and
+        velocity.
+      </div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/moleculardynamics/molecular1.png"
+          alt=""
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="paragraph2">SOLVENT MODEL</div>
+      <div class="paragraph">
+        The presence of a solvent greatly changes the behavior of a system and
+        as such it is important to consider solvent models if you want to get
+        the results that agree with experimental data. If ignored, inaccurate
+        data will greatly change the properties of the molecules in our system.
+        The next step up is an implicit solvent model, this is more
+        computationally expensive because the program imagines there is a sort
+        of solvent force that permeates our system and applies any relevant
+        forces to our molecules to mimic the presence of a solvent. Finally, the
+        explicit solvent model, which is the most computationally expensive but
+        also the most accurate one, actually fills up our system with solvent
+        molecules and does molecular dynamics calculations on them.
+      </div>
+      <div class="paragraph2">BOUNDARY CONDITIONS</div>
+      <div class="paragraph">
+        These will govern the behavior of molecules when they come in contact
+        with the simulation box edges or boundaries. Common approaches include a
+        solid wall that deflects or repels atoms when they come in contact with
+        the boundary. Periodic boundary conditions, by far the most common
+        method as it most closely resembles real life, mean that if an atom goes
+        into one boundary it comes out of the opposing boundary we can think of
+        this as an ever repeating unit cell of our simulation space. Some
+        simulation methods delete the atom or will simply crash when an atom
+        goes into a boundary. Sometimes we even use a non-cubic simulation space
+        such as a hexagonal spherical or cylindrical shape.
+      </div>
+      <div class="paragraph2">SIMULATION PROTOCOLS</div>
+      <div class="paragraph">
+        There are also simulation protocols that can keep specific things in our
+        system the same by altering different variables. We could refer to
+        classical molecular dynamics simulation as a Microcanonical Ensemble
+        (NVE)- Keeping constant the amount of substance, the volume and the
+        total energy. Another method is the canonical ensemble (NVT)-Keeping
+        constant the amount of substance, volume and temperature-which is why it
+        is also referred to as constant temperature molecular dynamics(CTMD). We
+        can refer to the implementation of this as a thermostat because the
+        temperature is kept constant. The isothermal isobaric ensemble (NPT) -
+        keeps the amount of substance, pressure and temperature constant. In the
+        same way that we had a thermostat to keep the temperature constant, a
+        barostat is used.
+      </div>
+      <div class="paragraph2">Why are we using MD?</div>
+      <div class="paragraph">
+        Molecular dynamics (MD) simulation is a powerful computational technique
+        used to study the interactions between biomolecules, including aptamers
+        and proteins. When investigating aptamer-protein interactions, MD
+        simulations offer several advantages and insights that make them a
+        valuable tool:
+      </div>
+      <div class="paragraph">
+        Atomic-Level Detail: MD simulations provide a high-resolution view of
+        the dynamics and interactions between individual atoms and molecules.
+        This level of detail is crucial for understanding the binding mechanism
+        of aptamers and proteins, as it reveals how specific amino acids and
+        nucleotides interact during the complex formation.
+      </div>
+      <div class="paragraph">
+        Flexibility and Dynamics: Aptamer-protein interactions often involve
+        conformational changes in both molecules upon binding. MD simulations
+        can capture these dynamic processes, showing how the aptamer and protein
+        adapt their structures over time as they come together or dissociate.
+        This dynamic information is essential for understanding the kinetics and
+        energetics of binding
+      </div>
+      <div class="paragraph">
+        Energetic Insights: MD simulations can provide information about the
+        energy landscape of the interaction. By monitoring the potential energy,
+        forces, and interactions between aptamer and protein over time,
+        researchers can calculate binding affinities, identify key binding
+        residues, and gain insights into the stability of the complex
+      </div>
+      <div class="paragraph">
+        Exploration of Binding Pathways: MD simulations can reveal potential
+        binding pathways and intermediate states during aptamer-protein
+        interactions. This information is valuable for understanding the various
+        stages of complex formation, including the initial encounter complex,
+        transition states, and final bound state.
+      </div>
+      <div class="paragraph">
+        Screening and Design: MD simulations can be used to screen a library of
+        aptamer sequences for their potential to interact with a target protein.
+        By simulating the binding of multiple aptamer candidates, researchers
+        can identify the most promising candidates for experimental validation.
+      </div>
+      <div class="paragraph">
+        Drug Discovery: MD simulations are increasingly used in rational drug
+        design. Understanding the aptamer-protein interaction at the atomic
+        level can aid in the design of aptamer-based therapeutics or the
+        optimization of existing aptamer drugs.
+      </div>
+      <div class="paragraph">
+        Experimental Hypothesis Testing: MD simulations can complement
+        experimental studies by providing hypotheses and predictions that can
+        guide further experiments. For example, they can suggest which amino
+        acid residues are critical for binding or identify potential mutations
+        to enhance binding affinity.
+      </div>
+      <div class="paragraph">
+        Reduced Cost and Time: While experimental studies of aptamer-protein
+        interactions can be time-consuming and costly, MD simulations can
+        provide insights at a fraction of the cost and time, making them a
+        cost-effective and efficient research tool.
+      </div>
+      <div class="paragraph">
+        In summary, MD simulations are a valuable tool for studying
+        aptamer-protein interactions because they offer atomic-level insights
+        into the dynamics, energetics, and mechanisms of binding. By
+        complementing experimental studies with computational simulations,
+        researchers can gain a more comprehensive understanding of these
+        interactions and accelerate the development of aptamer-based therapies
+        and diagnostics.
+      </div>
+    </section>
+    <section class="section" id="four">
+      <div class="heading">The Four-Step Process</div>
+      <div class="paragraph2">ENERGY MINIMIZATION (EM)</div>
+      <div class="paragraph">
+        Minimization is an important process to carry out before our main
+        simulation. It is designed to relax the system, distribute the energy
+        around the system and get as many atoms or molecules out of their local
+        minima and global minima.
+      </div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/moleculardynamics/molecular2.png"
+          alt=""
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="paragraph2">EQUILIBRATION (NVT)</div>
+      <div class="paragraph">
+        Equilibration is a process that we carry out before our main simulation
+        where we equilibrate the kinetic and potential energies across the
+        system usually to sort local groups of high energy or any other
+        unnatural phenomena in our system that usually get created during the
+        heating process. Where molecules are provided with energy and therefore
+        the so-called temperature of the system is raised from zero kelvin to
+        the specified temperature.
+      </div>
+      <div class="paragraph2">Dynamics(NPT)</div>
+      <div class="paragraph">
+        NPT Molecular Dynamics is a computational simulation technique used in
+        the field of molecular dynamics (MD) to study the behavior and
+        interactions of atoms and molecules in a system under constant pressure
+        (P), constant temperature (T), and constant number of particles (N).
+        Each of these variables is held constant during the simulation, which
+        allows researchers to mimic realistic conditions often encountered in
+        experiments or real-world systems.
+      </div>
+
+      <div class="paragraph2">Applications</div>
+      <div class="paragraph">
+        These include materials science, crystallography and polymer
+        simulations, discovering protein folding pathways and protein dynamics,
+        as well as protein protein-protein interactions, drug design,
+        calculation of free binding energy, the study of protein ligands
+        interactions, general study of biomolecules such as lipids, proteins,
+        dna, water and other solvents, study of small biological structures such
+        as viral capsids or ribosomes and that is by no means a comprehensive
+        list. There are many more niche applications.
+      </div>
+    </section>
+    <section class="section" id="software">
+        <div class="heading">Software used -GROMACS</div>
+        <div class="paragraph2">Why GROMACS?</div>
+        <div class="paragraph">
+            Development of computer technology in chemistry brings many applications of chemistry, not only the application to visualize the structure of molecules but also to molecular dynamics simulation. One of them is Gromacs. Gromacs is an example of molecular dynamics application developed by Groningen University. This application is non-commercial and able to work in the operating system Linux. The main ability of Gromacs is to perform molecular dynamics simulation and minimization energy. In the molecular dynamics simulation, Gromacs does not work alone. Gromacs interacts with Pymol and Grace. Pymol is an application to visualize molecule structure and Grace is an application in Linux to display graphs. Both applications will support analysis of molecular dynamics simulation.
+        </div>
+        <div class="images">
+          <img
+            src="https://static.igem.wiki/teams/4838/wiki/moleculardynamics/molecular3.png"
+            alt=""
+            width="100%"
+            height="100%"
+          />
+        </div>
+        <div class="paragraph2">Other Software - AMBER, ROSETTA, NAMD, Desmond</div>
+        <div class="paragraph">
+            Many other applications can be used depending on the two substances and binding interactions, parameters and Software availability. For DNA only simulations, NAMD is predominantly used, but AMBER and ROSETTA have high number of force fields which can be employed
+        </div>
+        <div class="paragraph2">What is CHARMM GUI? Why are we using it?</div>
+        <div class="paragraph">
+            CHARMM-GUI is a user-friendly web-based interface for setting up, running, and analyzing molecular dynamics (MD) simulations of biomolecular systems. It was originally developed for the CHARMM (Chemistry at HARvard Macromolecular Mechanics) force field but has also been extended to support other popular force fields, including GROMACS.
+        </div>
+  
+        <div class="paragraph2">The notable features of CHARMM-GUI:</div>
+        <div class="paragraph2">User-Friendly Interface:</div>
+        <div class="paragraph">
+            CHARMM-GUI provides an intuitive and user-friendly web interface that allows researchers, including those without extensive computational or programming experience, to set up complex MD simulations with ease.
+        </div>
+        <div class="paragraph">The interface guides users through the step-by-step process of system preparation, from uploading molecular structures to specifying simulation parameters. It offers helpful explanations and tooltips for each input field, making it accessible to both novice and experienced users.</div>
+        <div class="paragraph">The interface supports various force fields, solvent models, and simulation packages, such as CHARMM, GROMACS, NAMD, and AMBER, allowing users to choose the software and parameters that best suit their research needs.</div>
+        <div class="paragraph2">Automated System Setup:</div>
+        <div class="paragraph">CHARMM-GUI automates many aspects of system setup, saving users significant time and effort.</div>
+        <div class="paragraph">Users can input their molecular structures (e.g., proteins, nucleic acids, lipids) in various formats (e.g., PDB, Mol2) and specify simulation details (e.g., temperature, pressure, ion concentration).</div>
+        <div class="paragraph">CHARMM-GUI then generates the necessary input files (e.g., topology, coordinate, parameter files) tailored to the chosen force field and simulation software. This automation ensures consistency and accuracy in setting up simulations.</div>
+        <div class="paragraph">Advanced options, such as defining custom restraints, can also be configured through the interface.</div>
+        <div class="paragraph2">Analysis and Visualization Tools:</div>
+        <div class="paragraph">CHARMM-GUI offers a suite of analysis and visualization tools for post-simulation data analysis.</div>
+        <div class="paragraph">Users can visualize simulation trajectories, generate plots and graphs of key properties (e.g., RMSD, RMSF, radial distribution functions), and calculate various structural and dynamic properties of the biomolecular system.</div>
+        <div class="paragraph">The web interface provides interactive visualization capabilities, allowing users to inspect the structure and behavior of their system in 3D and explore specific regions of interest.</div>
+        <div class="paragraph">CHARMM-GUI also supports the analysis of membrane systems, ligand binding, and other complex biomolecular processes, providing researchers with valuable insights into their simulation results.</div>
+        <div class="images">
+            <img
+              src="https://static.igem.wiki/teams/4838/wiki/moleculardynamics/molecular4.png"
+              alt=""
+              width="100%"
+              height="100%"
+            />
+          </div>
+          <div class="images">
+            <img
+              src="https://static.igem.wiki/teams/4838/wiki/moleculardynamics/molecular5.png"
+              alt=""
+              width="100%"
+              height="100%"
+            />
+          </div>
+          <div class="paragraph2">Method used</div>
+          <div class="paragraph">A Buffer was made i.e. KCl at 0.15 M for simulation to take place
+            
+            
+            The Water-Module used is TIP3.
+            Gridbox for MD simulations was generated using PME-FFT, a Fourier transform method.
+            </div>
+          <div class="paragraph">A waterbox was generated using CHARMM-GUI, for solvation to occur</div>
+          <div class="paragraph">Monte-Carlo Ion placing method was used to determine the ion positions in the solution</div>
+          <div class="paragraph">The Water-Module used is TIP3.</div>
+          <div class="paragraph">Gridbox for MD simulations was generated using PME-FFT, a Fourier transform method.</div>
+          <div class="paragraph2">Results for CHARMM-GUI</div>
+          <div class="paragraph">We obtain the Input files for EM, NVT and NPT runs in .mdp format.
+            </div>
+          <div class="paragraph">We also obtain the coordinates, i.e. topology file in .topol format.</div>
+          <div class="paragraph">Protein in solvated box structure is obtained in the .gro format</div>
+          <div class="images">
+            <img
+              src="https://static.igem.wiki/teams/4838/wiki/moleculardynamics/molecular6.png"
+              alt=""
+              width="100%"
+              height="100%"
+            />
+          </div>
+          <div class="images">
+            <img
+              src="https://static.igem.wiki/teams/4838/wiki/moleculardynamics/molecular7.png"
+              alt=""
+              width="100%"
+              height="100%"
+            />
+          </div>
+      </section>
+      <section class="section" id="force">
+        <div class="heading">Force Fields:</div>
+        <div class="paragraph2">What are Force Fields?</div>
+        <div class="paragraph">
+            A force field encompasses two major components: a set of potential energy functions and associated parameters. Potential energy functions, derived from quantum mechanical principles or experimental data, define the energy landscapes governing atomic interactions. Parameters, on the other hand, are numerical values assigned to atoms or atom pairs, representing properties like bond lengths, angles, dihedral angles, and van der Waals radii. By calculating the total energy of a system using these functions and parameters, molecular dynamics simulations predict the system's evolution over time.
+        </div>
+        <div class="paragraph">Force fields enable researchers to study complex phenomena such as protein folding, ligand binding, and chemical reactions, shedding light on drug design, material science, and biochemistry. However, force fields are not without limitations. The trade-off between accuracy and computational efficiency is a perpetual challenge, as simplified models might fail to capture nuanced interactions. Additionally, force fields are often parameterized using experimental data, which can lead to inaccuracies when extrapolating beyond the training data</div>
+        <div class="paragraph">Potential Energy Functions : It is also important to choose the right force field simulation. Some force fields such as charm or opls are specifically designed for biomolecules while others are better at simulating crystallographic or small molecule systems. A graph that rates different force fields on their accuracy - a lower number signifying greater agreement with experimental results</div>
+        <div class="images">
+          <img
+            src="https://static.igem.wiki/teams/4838/wiki/moleculardynamics/molecular8.png"
+            alt=""
+            width="100%"
+            height="100%"
+          />
+        </div>
+        <div class="paragraph2">What is the need of Force Fields in Simulation?</div>
+        <div class="paragraph">
+            Force fields are integral to molecular dynamics simulations due to their role in predicting atomic interactions, molecular motion, and thermodynamics. By defining forces between atoms and molecules, force fields guide trajectories, illuminate equilibrium states, and unveil reaction mechanisms. They prove indispensable for studying biological processes, designing drugs and materials, and conducting virtual experiments. Additionally, force fields offer quantitative insights, aiding in hypothesis testing and validation against experimental data. While vital, these models possess limitations stemming from their approximations, driving ongoing efforts to refine them and develop more accurate representations of molecular behavior.
+        </div>
+        <div class="paragraph2">CHARMM Force Field</div>
+        <div class="paragraph">
+            According to the CHARMM force field the total energy of an atom consists of its energy associated with the bonding and the non-bonding interactions. The bonding energy is itself composed of the sum of the energy associated with the atomic bonds, the atomic angles, atomic dihedrals, atomic impropers and the Urey-Bradley term (described as the harmonic term in the distance between atoms 1 and 3 of some of the angle terms. The way that these manifest themselves is that, depending on the distance between two bonded atoms or the angle between three atoms or four atoms in an improper or dihedral, different energies will be assigned. There is an optimal length between two atoms and depending on the length, a different energy value will be added. Similarly for the non-bonded energy composed of van der waals interactions (also sometimes called the Leonard-Jones term) and the electrostatic interactions (which happen between charged particles). All of this combines into one equation where each contributing energy is given with some variables that are all taken from the input files. Even a small change in these could massively affect the behavior of the simulation..
+        </div>
+  <div class="images">
+    <img src="https://static.igem.wiki/teams/4838/wiki/moleculardynamics/molecular9.png" alt="" style="width: 100%;height: 100%;">
+  </div>
+        <div class="paragraph2">Which one are we using? - CHARMM 36M</div>
+        <div class="paragraph">
+            CHARMM36m, an advanced iteration of the CHARMM force field, stands as a cornerstone in the realm of biomolecular simulations. Engineered to elucidate the intricate behaviors of lipids, proteins, nucleic acids, and carbohydrates, CHARMM36m delves into the heart of biomolecular complexity. By meticulously assigning parameters to atoms, bonds, and forces, it provides a comprehensive representation of molecular interactions. Notably, CHARMM 36ms paramount focus on lipids and carbohydrates serves to bridge gaps in understanding these essential components.
+        </div>
+        <div class="images">
+            <img src="https://static.igem.wiki/teams/4838/wiki/moleculardynamics/molecular10.png" alt="" style="width: 100%;height: 100%;">
+          </div>
+        <div class="paragraph">
+            Renowned for its accuracy, CHARMM36m significantly refines protein structure and dynamics simulations. This refinement is a boon for comprehending the mechanistic underpinnings of biological processes. However, its high level of detail demands substantial computational resources. Drawing strength from its meticulous parameterization grounded in experimental data, CHARMM36m offers unparalleled reliability.
+        </div>
+        <div class="paragraph">
+            Researchers harness CHARMM36m to unravel the mysteries of biomolecular systems. This force field's capability to depict atomic-level intricacies opens avenues to explore functional mechanisms and intermolecular interactions. Consequently, CHARMM36m remains an indispensable tool in the arsenal of scientists delving into the microscopic intricacies of life's building blocks.
+        </div>
+      </section>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,402 @@
+{% extends "layout.html" %} {% block page_content %}
+<div>
+  <img src="https://static.igem.wiki/teams/4838/wiki/dry-lab/dl-model.png" class="background-img"
+    style="width: 100%; height: 100%" />
+</div>
+<div class="wrapper-main">
+  <div class="left-side">
+    <nav class="nav1">
+      <h6 class="heading-nav">Model</h6>
+      <div class="sidebar">
+        <div><a class="side-items" href="#overview">LACTOFERRIN</a></div>
+        <div>
+          <a class="side-items" href="#Inspiration">AMYLOID BETA</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="right-side">
+    <section id="overview" class="section">
+      <div class="heading">LACTOFERRIN</div>
+      <div class="paragraph">
+        For Lactoferrin, After conducting the Literature Review, we found the
+        Lactoferrin structure in Saliva in RCSB database, 1IFG, a polymeric
+        structure.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model1.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        We finalized these structures for running Molecular Dynamics
+        Simulations, and reviewed the iGEM registry, and we found a part for
+        Lactoferrin Aptamer, The following Sequence is the iGEM registry,
+        gcaggacaccgtaacacgggcttttgctttatcgtaccctttatgctagattgtcctgc
+      </div>
+      <div class="paragraph">
+        For every sequence, we employed the help of Web Servers to construct 2-D
+        and using that, 3-D Structures for the Aptamer, like Mfold for 2-D, and
+        Xiao Lab for 3-D structures.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model2.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model3.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        We performed Molecular Docking for the Protein-DNA Aptamer system using
+        Molecular Docking using HADDOCK 2.4 server, accessing their highly
+        effective Protein-Nucleic Acid Docking. We conduct Molecular Docking to
+        find the best possible docking posse and evaluate the structures for MD
+        Simulation.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model4.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model5.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Using the plots like Energy v/s Interface-RMSD, Vanderwal Forces v/s
+        i-RMSD, and HADDOCK Score v/s i-RMSD, we can easily conclude that
+        Cluster 1 contains the best confirmation for Molecular Dynamics analysis
+        of Protein-DNA Aptamer binding.
+      </div>
+      <div class="paragraph">
+        MD Simulation, We use the software GROMACS, on a Linux-Ubuntu system
+        powered by NVIDIA GPU. The input files for the same were generated
+        through the CHARMM-GUI web server, where we had to set-up the input
+        Simulation conditions, and generate grid-box, by giving input
+        coordinates for the same.
+      </div>
+      <div class="paragraph">
+        For Lactoferrin, we picked the simulation time to be 50 ns. We simulated
+        the three structures present in the simulation, in a 0.15M KCl solution,
+        as per pre-existing Literature work on the same.
+      </div>
+      <div class="paragraph">
+        After finishing the simulation of all three structures,
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model6.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        As you can see the spike in RMSD values, the 3rd Structure is relatively
+        unstable compared to 1st and 2nd Structure in the simulation, This
+        information can be further confirmed using RMSF values for structures,
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model7.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model8.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Relatively, Aptamer binds more tightly in the 1st Structure, according
+        to the RMSF data. We can also analyze the Gyration radius data to see
+        how much Aptamer is stable in its conformation.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model9.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        As we can clearly see, The Radius of Gyration for Structure3 is changing
+        overly as the simulation progresses(Highlighted in Green), But the
+        Structure 1 and 2 is relatively stable throughout the simulation.
+      </div>
+      <div class="paragraph">
+        Now, we can compare Structure 1 and Structure, by checking the average
+        number of Hydrogen Bonds throughout the simulation, as Hydrogen Bonds
+        help in establishing the stability of the structure.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model10.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model11.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Here, we can clearly see that Structure 1 and 2 have nearly identical
+        average number of Hydrogen bonds, hence we cannot directly compare the
+        two based on the computational data that we have generated through
+        simulation.
+      </div>
+    </section>
+    <section class="section" id="Inspiration">
+      <div class="heading">AMYLOID BETA</div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model12.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        After conducting the Literature Review, we found two particular
+        structures for Amyloid Beta, in both Monomeric and Fibril-like form, PDB
+        ID’s 1IYT and 5KK3. 1IYT is the monomeric structure while the 5KK3 is a
+        Fibril-like structure. We finalized these structures for running
+        Molecular Dynamics Simulations, and reviewed the Literature to find the
+        DNA Aptamer for the best binding structure.
+      </div>
+      <div class="paragraph">
+        The Following Aptamers were shortlisted for final screening regarding
+        the Aptamer selection for Amyloid Beta-42,
+      </div>
+      <div class="paragraph">T-SO530 GGTGCGGCGGGACTAGTGGGTGTG</div>
+      <div class="paragraph">T-SO552 GCGTGTGGGGCTTGGGCAGCTGGG</div>
+      <div class="paragraph">T-SO504 CAGGGGTGGGCAAAGGGCGGTGGTG</div>
+      <div class="paragraph">T-SO508 GCCTGTGGTGTTGGGGCGGGTGCG</div>
+      <div class="paragraph">
+        DNA aptamer Aβ7-92-1H1 (Aβ-Apt, CCGG TGGG GGAC CAGT ACAA AAGT GGGT AGGG
+        CGGG TTGG AAAA)
+      </div>
+      <div class="paragraph">
+        For every sequence, we employed the help of Web Servers to construct 2-D
+        and using that, 3-D Structures for the Aptamer, like Mfold for 2-D, and
+        Xiao Lab for 3-D structures.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model13.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model14.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        After further screening established on Literature reviews and past
+        experiments, DNA Aptamer and T-SO508 are the most probable candidates
+        for our analysis. This was further confirmed by the process of Molecular
+        Docking using HADDOCK 2.4 server, accessing their highly effective
+        Protein-Nucleic Acid Docking.
+      </div>
+      <div class="paragraph">
+        By the means of Haddock Docking score, we eliminated the possibility of
+        using other Aptamers than our selected ones.
+      </div>
+      <div class="paragraph">
+        We also conduct docking analysis of DNA Aptamer and T-S0508 to find the
+        best possible docking posse and confirmation for further Molecular
+        Dynamics Analysis. Here, we use the Centre of Mass constraint in the
+        docking server, and obtain HADDOCK plots and Clusters.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model15.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        For 1IYT, the possible clusters for docking containing different
+        confirmation were plotted for various thermodynamic parameters.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model16.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model17.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model18.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model19.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Using the plots like Energy v/s Interface-RMSD, Vanderwal Forces v/s
+        i-RMSD, and HADDOCK Score v/s i-RMSD, we can easily conclude that
+        Cluster 8 contains the best confirmation for Molecular Dynamics analysis
+        of Protein-DNA Aptamer binding.
+      </div>
+      <div class="paragraph">
+        Similarly extending the same analysis for the DNA Aptamer, we can easily
+        select the best cluster for that too.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model20.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model21.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        In this case, we can clearly see that there is just one cluster which
+        has the best conformations for Docking, so we can easily pick Cluster 1
+        structures.
+      </div>
+      <div class="paragraph">
+        MD Simulation, We use the software GROMACS, on a Linux-Ubuntu system
+        powered by NVIDIA GPU. The input files for the same were generated
+        through the CHARMM-GUI web server, where we had to set-up the input
+        Simulation conditions, and generate grid-box, by giving input
+        coordinates for the same.
+      </div>
+      <div class="paragraph">
+        We also initiated the Self-Run of Protein, that is to analyze the
+        stability of Protein, in the simulation condition, to understand any
+        potential change in conformation or sudden spike in any parameter which
+        doesn’t come out of nowhere when analyzing the docked results in MD
+        simulation.
+      </div>
+      <div class="paragraph">
+        We simulate 1IYT, in MD Simulation with 125 ns, to understand the
+        simulation time and stability of the protein with respect to time in the
+        simulation. The Initial Setup is 0.15M KCl, After running simulations,
+        we calculated Backbone to Protein RMSD value, to identify the stability
+        of Protein,
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model22.jpg" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        As we can see RMSD spikes after around 100 ns, and initially the Protein
+        equilibrates pretty quickly, and largely stabilizes, albeit a small
+        spike.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model23.jpg" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Protein largely stops conformation changes in the change, 50 ns and 100
+        ns, which indicates it largely stabilizes. We then proceed for initial
+        simulation analysis for the Amyloid Beta with Aptamers we selected
+        initially.
+      </div>
+      <div class="paragraph">
+        The initial Simulation conditions were set up as 0.15 M KCl, with the
+        grid-box fully incorporating the Protein-Aptamer setup.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model24.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Important aspect was to determine the simulation time and condition for
+        the setup, setting up the periodic boundary conditions.
+      </div>
+      <div class="paragraph">
+        Initially we ran the simulation for 10 ns each for both 1IYT and 5KK3,
+        with the Protein Size, 4.28 kDA and 81.5 kDA respectively.
+      </div>
+      <div class="paragraph">
+        As expected, the Simulation wasn’t enough to establish any equilibration
+        condition for the system, as the system contained high instability as
+        indicated by the plots.
+      </div>
+      <div class="paragraph">
+        So, we reviewed Literature and analyzed experimental data for similar
+        type of Protein-Systems, and found 0.15 M KCl + 0.15 M MgCl2 as high
+        stable for the Protein-Aptamer based system, <br />
+        For 1IYT, a smaller Protein, we will simulate it for 100 ns. <br />
+        For 5KK3, a larger Protein, we will simulate it for 50 ns.
+      </div>
+      <div class="paragraph">
+        Now, for Aptamer T-SO508, we pick the cluster as discussed above in the
+        docking part, which has the most stable structures.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model25.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        The structures are highly unstable, as we can see four structures in
+        there, with sudden spikes in RMSD. Equilibration of Protein-Aptamer
+        doesn’t happen with stability, so we need to simulate it for longer than
+        100 ns.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model26.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Structure 4 is among all the structures is one of most stable
+        structures, with RMSD value keeping low, and structure reaching nearly
+        equilibration stage Rest of the structures have higher RMSD values and
+        high spikes in the value.
+      </div>
+      <div class="paragraph">
+        Now, we analyze the Radius of Gyrations to see how Aptamers change in
+        conformation, and check the stability of the Aptamer-Protein bond.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model27.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Here, we can clearly see Structure 4 has the least value of Radius of
+        Gyration, and it further reaffirms the belief that Structure 4 is the
+        most stable structure in this Cluster. We can further analyze it by
+        running it at higher simulation time.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model28.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        We can also check the RMSF value for checking the fluctuation of the
+        aptamers, and it also turned out to be pretty low relative to the
+        others.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model38.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Now, we compare Structure 4 with DNA Aptamer, MD Simulation result, we
+        can see how both Aptamers behave, which gives us the indication of the
+        better Aptamers for Wet Lab Analysis.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model29.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        We can see after early equilibration, the DNA Aptamer can also give
+        pretty good results in the Wet Lab experiments, even comparable to the
+        best structure from other Aptamer Clusters.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model30.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Hence, we easily can suggest the best docking configurations with
+        Aptamers we have taken initially using these above plots.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model31.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model32.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        For 5KK3, The Fibril Form of AB-42, we have conducted Analysis for two
+        structures each for the Two Aptamer Clusters found after docking
+        analysis.
+      </div>
+      <div class="paragraph">
+        We do the analysis for the T-SO508 Aptamer and DNA Aptamer, at 50 ns .
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model33.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Here, we can clearly see that one conformation of DNA Aptamer is
+        completely out of the picture with high RMSD and higher deviations. We
+        can compare the rest of the 3 structures.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model34.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        Here we can see that DNA Aptamer 1st Structure has the lowest RMSD, and
+        the deviations are pretty low, which means that it can effectively be
+        used as an Aptamer for Amyloid Beta.
+      </div>
+      <div class="paragraph">
+        We can also check the Plots for radius of Gyration to see if
+        conformation is changing quickly or not, and how high the value is, In
+        the Graph we can see the radius of Gyration for DNA Aptamer 1st
+        Structure is nearly constant, and its high, which further affirms we can
+        use it as an Aptamer.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model35.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="paragraph">
+        The RMS value of Aptamer also changes, which highlights potential sites
+        of Mutation and important residues in the Protein.
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model36.png" alt="" width="100%" height="100%" />
+      </div>
+      <div class="images">
+        <img src="https://static.igem.wiki/teams/4838/wiki/model/model37.png" alt="" width="100%" height="100%" />
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}

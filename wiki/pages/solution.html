@@ -1,0 +1,320 @@
+{% extends "layout.html" %} {% block page_content %}
+<div class="bg">
+  <img
+    src="https://static.igem.wiki/teams/4838/wiki/solution/group-144.png"
+    class="background-img"
+    style="width: 100%; height: 100%"
+  />
+</div>
+<div class="wrapper-main">
+  <div class="left-side">
+    <nav class="nav1">
+      <h6 class="heading-nav">Solution</h6>
+      <div class="sidebar">
+        <div>
+          <a class="side-items" href="#sample">Sample & Biomarkers </a>
+        </div>
+        <div>
+          <a class="side-items" href="#aptamer">Aptamer</a>
+        </div>
+        <div>
+          <a class="side-items" href="#Electrochemical">Electrochemical Aptasensor</a>
+        </div>
+        <div>
+          <a class="side-items" href="#Potentiostat">Potentiostat</a>
+        </div>
+        <div><a class="side-items" href="#Cyclic">Cyclic Voltammetry</a></div>
+        <div><a class="side-items" href="#References">References</a></div>
+      </div>
+    </nav>
+  </div>
+  <div class="right-side">
+    <section id="sample" class="section">
+      <div
+        class="heading"
+        style="
+          background: var(
+            --highlight,
+            linear-gradient(90deg, #822a6f 0%, #df3343 100%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        "
+      >
+        Biomarkers
+      </div>
+      <div class="paragraph">
+        The histopathological changes associated with Alzheimer's disease (AD)
+        become apparent many years before clinical symptoms emerge. Thus, there
+        is a pressing need for an early, cost-effective, noninvasive diagnostic
+        biomarker capable of identifying specific Alzheimer's pathology. Recent
+        advancements in neuroimaging biomarkers show promise, but these methods
+        are expensive and involve radiation exposure. Additionally, analyzing
+        cerebrospinal fluid (CSF) biomarkers necessitates an invasive lumbar
+        puncture procedure
+      </div>
+
+      <div class="paragraph">
+        Saliva, being easily obtainable, represents an attractive option for a
+        future AD diagnostic method. The aim of this systematic review was to
+        explore research on biomarkers in saliva samples for AD diagnosis.
+      </div>
+      <div class="paragraph">
+        Aβ42 and tau appear to be strong contenders as potential salivary
+        biomarkers for AD, with other candidates like lactoferrin and specific
+        metabolites showing promise. To further validate their utility, more
+        extensive studies with larger sample sizes and standardized sampling and
+        processing methods are needed. Factors such as diurnal variations,
+        reduced oral self-care abilities in AD patients, and variations in
+        salivary flow rates should be taken into account during the
+        investigation.
+      </div>
+      <div class="paragraph">
+        Our chosen biomarkers for saliva based detection of Alzheimers are
+        Lactoferrin and Aβ42.
+      </div>
+      <div class="paragraph">
+        Lactoferrin, an iron–binding protein of the transferrin family, found in
+        several body fluids has recently been observed to be found in decreased
+        levels in the saliva of patients with a corresponding risk of developing
+        Alzheimer’s. Comparative studies establish correlations with the
+        pathological changes of AD by evaluating its relationship with amyloid
+        PET [1], and cortical amyloid load [2].
+      </div>
+      <div class="paragraph">
+        To ascertain the selectivity of our kit, we decided to also propose the
+        quantification of Salivary Beta Amyloid. Studies have reported the Aβ42
+        levels in saliva were found to be significantly higher in AD patients
+        than in controls (51.7 ± 1.6 pg/mL for AD patients and 21.1 ± 0.3 pg/mL
+        for controls) [3]. Biomarker studies also estimate that Aβ42 brain
+        deposits begin a decade or more before the clinical onset of AD and the
+        generality of Aβ42 production in the body , indicating the possibility
+        of early diagnosis and risk prediction [4].
+      </div>
+    </section>
+    <section class="section" id="aptamer">
+      <div
+        class="heading"
+        style="
+          background: var(
+            --highlight,
+            linear-gradient(90deg, #822a6f 0%, #df3343 100%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        "
+      >
+        Aptamers
+      </div>
+      <div class="paragraph">
+        Aptamers are short, single-stranded nucleic acids or peptides that can
+        selectively bind to specific target molecules. Aptamers can exhibit high
+        binding specificity and affinity for their target molecules, often
+        rivaling or surpassing that of antibodies.A study published in the
+        journal "Nature Biotechnology" reported that aptamers can achieve
+        dissociation constants (Kd) in the picomolar to nanomolar range,
+        demonstrating their excellent binding affinities (source: Klussmann, S.
+        (1996). Nucleic Acids Research, 24(4), 596-601). Aptamers can be
+        selected against a wide range of targets, including small molecules,
+        proteins, and even whole cells. Aptamers are chemically synthesized and
+        can be modified for enhanced stability. They are less prone to
+        degradation and denaturation compared to antibodies.
+      </div>
+      <div class="paragraph"><i>A- Aptamer sequence for Lactoferrin:</i></div>
+      <div class="paragraph" style="text-transform: uppercase;display: flex; flex-wrap: wrap;">
+        <b>gcaggacaccgtaacacgggcttttgctttatcgtaccctttatgctagattgtcctgc</b>
+      </div>
+      <div class="paragraph">
+        One of the biggest costs of managing AD is that of informal care, i.e.
+        family members staying home to support and take care of dependent
+        elderly, and the consequent loss of family income. This is particularly
+        high in India due to the lack of trained professionals in managing
+        patients with AD and also in general geriatric care. This tends to
+        disproportionately and unfairly affect the women in the families who are
+        expected and forced to stay back at home. Thus, there’s an urgent need
+        for the development of an easily accessible diagnostic tool, to screen
+        elderly populations regularly for timely intervention and better
+        planning of how to care for the patient.
+      </div>
+      <div class="paragraph">
+        The aptamer sequence we ordered was from the iGEM Standard Registry
+        <span><a href="http://parts.igem.org/Part:BBa_K3724005">Part:BBa K3724005 </a></span>submitted by
+        iGEM21_Rochester with a detection limit of 1 ± 0.12 nM.
+      </div>
+      <div class="paragraph"><i>B- Aptamer sequences for Aβ42:</i></div>
+      <div class="paragraph">
+        We reviewed all existing aptamers against Amyloid Beta proteins [5][6]
+        and narrowed down on the ones relevant to the type of protein pool found
+        in saliva. We were specific about using DNA aptamers owing to their
+        increased stability compared to RNA aptamers. Since AD diagnosis is
+        reliant specifically on Aβ42 and not other oligomers, we narrowed down
+        on the DNA aptamer Aβ7-92-1H1 (Aβ-Apt, CCGG TGGG GGAC CAGT ACAA AAGT
+        GGGT AGGG CGGG TTGG AAAA) [7]. Reported to have a Kd= 63.4nM (Surface
+        Plasmon Resonance).
+      </div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/solution/solution1.png"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/solution/solution2.png"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/solution/solution3.png"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
+    </section>
+    <section class="section" id="Electrochemical">
+      <div
+        class="heading"
+        style="
+          background: var(
+            --highlight,
+            linear-gradient(90deg, #822a6f 0%, #df3343 100%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        "
+      >
+      Electrochemical Aptasensor
+      </div>
+      <div class="paragraph">
+        Aptamers are rapidly replacing anti-bodies as recognition elements in most large-scale biosensing applications owing to their ease of synthesis, stability, and reproducibility. The design of an electrochemical aptasensor usually involves the immobilization of an aptamer on an electrode either directly or with the aid of nanoparticles for increased surface area. The aptamer may also be labeled with a redox tag. The basic working principle is to study the change in current, impedance or potential at the electrode due to the recognition event, i.e. the conformational change in the aptamer due to binding. 
+      </div>
+      <div class="paragraph">The most distinct advantage of the electrochemical method of sensing and sensitive quantification of biomarkers is their scope for miniaturization and low cost. This makes them very promising candidates for revolutionizing the scope of diagnostics and particularly, in making accessible Point-Of-Care kits. Electrochemical aptasensors also exhibit excellent sensitivity, and are capable of detecting up to picomolar and femtomolar ranges. </div>
+      <div class="paragraph">Committed to our cause of making Alzheimer’s diagnosis accessible, we focused our literature review and experiments on designing a kit that would be as low-cost and easily reproducible as possible. </div>
+      <div class="paragraph">Screen Printed Gold Electrodes provide significant advantages over traditional Gold Disk Electrodes as it satisfies POC-testing requirements for portability, cost and ease of use. Owing to issues with purity, morphology, and reactivity of the organic ink printing produced surfaces of Au-SPEs, the surfaces are not perfect and may exhibit islets of aged gold. This significantly hinders the reproducibility and stability of such sensors. Reports recommend the electrochemical deposition of gold as a first step, or the using of nanoparticles, but these additional steps reduce the advantages of using de-facto reproducible surfaces and increase the cost considerably. This establishes a need for the manufacturing of SPEs suited to the need of such biosensors.  From our literature survey, we found and narrowed down on protocols for optimal pre-treatment and modification. Electrochemical cleaning with 0.5M H2SO4 is reported to have partially purified the surface and increased activity. [8]</div>
+      <div class="paragraph">The proposed kit consists of two separate sensing slides- Screen Printed Gold Electrodes with aptamers specific to Lactoferrin and Amyloid Beta 42 immobilized on each. The immobilization strategy makes use of the strong affinity gold surfaces for thiol groups. The aptamers used are in their thiolated form, with an additional 6-carbon chain. Strong S-Au bonds formed when thiolated aptamers are drop-casted onto the gold surface. This self-assembly monolayer of the aptamers would be interspaced with mercaptohexanol and dithiothreitol to prevent fouling and maintain sufficient steric hindrance for the upright positioning of unbound aptamers. This would also serve as a blocking agent to minimize the noise in the signal detected and ensure only signal generated from the binding event with the aptamer is recorded. </div>
+      <div class="paragraph">Each slide would then be connected to a potentiostat that would then perform Cyclic Voltammetry and Differential Pulse Voltammetry across the electrodes to measure and quantify the change in signal and corresponding concentrations of both biomarkers would be inferred to calculate the risk of the user developing/having Alzheimer’s. </div>
+    </section>
+    <section class="section" id="Potentiostat">
+      <div
+        class="heading"
+        style="
+          background: var(
+            --highlight,
+            linear-gradient(90deg, #822a6f 0%, #df3343 100%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        "
+      >
+      Potentiostat 
+      </div>
+      <div class="paragraph">
+        A potentiostat is a device that controls the change in voltage across the connected electrodes and measures the corresponding change in current. This is a powerful tool for electrochemical analyses. Traditionally available laboratory potentiostats are large, expensive, benchtop equipment. However, recent advances in electronics have led to the effective low-cost miniaturization of these, optimized to be used as POC devices, Quality Controls and Wearable Devices. They report comparable sensitivity and range too.
+      </div>
+      <div class="paragraph">
+        A typical three-electrode potentiostat design is illustrated in the diagram below. The design consists of a Digital-to-Analog Converter (DAC), an Analog-to-Digital Convertor (ADC) for communication between the microcontroller and the electrodes, and Op-Amps that act as a filter
+      </div>
+      <div class="paragraph">
+        While these systems are usually connected via USB to a system, multiple papers describe and characterize open-source wirelessly controlled potentiostats that can perform almost all the common electrochemical analysis techniques like Cyclic Voltammetry, Differential Pulse Voltammetry, and Chronoamperometry[9]. The microcontroller could also be controlled via the user’s smartphone using bluetooth. The user interface would have presets with instructions consisting of optimal scan-rates and potentials to perform Cyclic Voltammetry on the given electrode. 
+      </div>
+    </section>
+    <section class="section" id="Cyclic">
+      <div
+        class="heading"
+        style="
+          background: var(
+            --highlight,
+            linear-gradient(90deg, #822a6f 0%, #df3343 100%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        "
+      >
+      Voltametric Analysis
+      </div>
+      <div class="paragraph">
+        To effectively measure and interpret the signals generated by our Screen Printed Gold Electrodes with immobilized aptamers specific to Lactoferrin and Amyloid Beta 42, we utilize two electrochemical techniques: Cyclic Voltammetry (CV) and Differential Pulse Voltammetry (DPV). 
+      </div>
+      <div class="paragraph">
+        Cyclic Voltammetry is a well-established electrochemical technique used to investigate the redox behavior of molecules and materials on electrode surfaces. In our aptasensor, CV involves cycling the potential (voltage) applied to the electrodes through a range of values and measuring the resulting current. By analyzing the shape and position of peaks in the voltammograms, and creating corresponding calibration curves, the app could quantify the concentration of the target biomarkers (Lactoferrin and Amyloid Beta 42) in the sample.
+      </div>
+      <div class="paragraph">
+        Differential Pulse Voltammetry is a highly sensitive electrochemical technique that enhances the detection limits of target molecules. DPV applies a series of discrete potential pulses to the working electrode, allowing for the measurement of small current changes resulting from the binding events. This technique offers improved selectivity and sensitivity compared to CV, making it ideal for detecting biomarkers at low concentrations. 
+      </div>
+      <div class="paragraph">
+        The integration of these techniques with a user-friendly mobile app would enhance the accessibility and utility of our biosensor kit. A mobile app would guide the user through the CV and DPV process, controlling the potentiostat to apply specific voltage waveforms, record current responses, and generate voltammograms with step-by-step instructions and presets. Users can initiate the electrochemical measurements, and the app would display real-time data and generate voltammograms or DPV plots. The data analysis tools to interpret the results and calculate the concentrations of biomarkers would also be integrated, calculating the risk of the patient developing Alzheimer’s.
+      </div>
+      <div class="paragraph">
+        Additionally, the app can store and share test results, making it suitable for healthcare professionals and remote monitoring.
+      </div>
+
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/solution/solution5.png"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
+    </section>
+    <section class="section" id="References">
+      <div
+        class="heading"
+        style="
+          background: var(
+            --highlight,
+            linear-gradient(90deg, #822a6f 0%, #df3343 100%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        "
+      >
+        References
+      </div>
+      <div class="paragraph">
+        1. https://www.sciencedirect.com/science/article/pii/S2352396420302097 
+
+      </div>
+      <div class="paragraph">
+        2. https://alzres.biomedcentral.com/articles/10.1186/s13195-021-00891-8 
+
+      </div>
+      <div class="paragraph">
+        3. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6158897/ 
+       
+      </div>
+      <div class="paragraph">
+        4. https://pubmed.ncbi.nlm.nih.gov/27792013/ 
+       
+      </div>
+      <div class="paragraph">
+        5. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8899576/#B55
+        
+      </div>
+      <div class="paragraph">
+        6. https://www.sciencedirect.com/science/article/pii/S0021925821012874
+        
+      </div>
+      <div class="paragraph">
+        7. https://pubs.acs.org/doi/abs/10.1021/acsabm.0c00996 
+        
+      </div>
+      <div class="paragraph">
+        8. https://www.sciencedirect.com/science/article/pii/S0039914022002521 
+        
+      </div>
+      <div class="paragraph">
+        9. https://pubs.acs.org/doi/10.1021/acs.analchem.8b00850 
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}

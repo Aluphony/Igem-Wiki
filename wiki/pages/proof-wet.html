@@ -1,0 +1,96 @@
+{% extends "layout.html" %} {% block page_content %}
+<div>
+  <img
+    src="https://static.igem.wiki/teams/4838/wiki/wet-lab/poc.png"
+    class="background-img"
+    style="width: 100%; height: 100%"
+  />
+</div>
+<div class="wrapper-main">
+  <div class="left-side">
+    <nav class="nav1">
+      <h6 class="heading-nav">Proof of Concept</h6>
+      <div class="sidebar">
+        <div>
+          <a class="side-items" href="#introduction">Proof of Concept</a>
+        </div>
+        <div>
+          <a class="side-items" href="#four">Future Plans </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="right-side">
+    <section class="section" id="introduction">
+      <div class="heading">Proof of Concept</div>
+      <div class="paragraph">
+        The aim of our kit was to successfully quantify the different
+        concentrations of the biomarker within the detection ranges described in
+        literature.
+      </div>
+      <!-- image here -->
+      <div class="images" style="height: 0 !important;">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/wetlab-proofofconcept/image1.png"
+          alt=""
+          style="width: 100%"
+        />
+      </div>
+      <div class="paragraph">
+        According to this, decreased Salivary Lactoferrin (around 4.78 ug/ml) is
+        indicative of a high risk of developing Alzheimer’s.
+      </div>
+      <div class="paragraph">
+        The successful quantification of the biomarkers here would only meet our
+        goal if the method of quantification is cheap, can be miniaturized, and
+        easily used by any one. All these things are true for Electrochemical
+        Analysis. In fact our proposed biosensor design also can easily be
+        adapted to be used for other diseases by identifying different
+        biomarkers and finding the corresponding aptamers for them.
+      </div>
+      <div class="paragraph">
+        Our Wet Lab results successfully established a strong linear correlation
+        (R-square value= 0.988) between the concentration and current within the
+        required range for diagnosis and risk calculation.
+      </div>
+      <!-- image here -->
+      <div class="images">
+        <img
+          src="https://static.igem.wiki/teams/4838/wiki/wetlab-proofofconcept/image2.jpg"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="paragraph">
+        This serves as proof of concept for the successful quantification of
+        biomarker and modeling the behavior of our biosensor within this range.
+      </div>
+    </section>
+    <section class="section" id="software">
+      <div class="heading">Future Plans</div>
+      <div class="paragraph">
+        A proof of concept however, is only a practical validation of our
+        theoretical proposal. To truly develop our kit though, there are several
+        more steps to go through. We must first optimize our biosensor further
+        by experimenting with more spacer molecule options and ratios. We are
+        also considering the use of nanomaterials to increase sensitivity. Along
+        with this, we must achieve reproducibly stable Aptasensor Fabrications
+        and a reliable protocol for this. Apart from optimisation, our proposed
+        kit will also detect Amyloid Beta 42. The next step would be repeating
+        these electrode immobilization and optimization steps with Amyloid Beta
+        42 specific aptamers.
+      </div>
+      <div class="paragraph">
+        Our Dry Lab work also establishes the possibility of comprehensively
+        studying the behavior of aptamers and proteins through Simulations and
+        this creates the scope of introducing carefully analyzed mutations, and
+        perhaps also modeling Aptamer Modifications to increase specificity,
+        sensitivity and binding affinity. These new aptamers would then take the
+        place of our current protocols, and could by that point be easily
+        optimized to create an efficient biosensor and diagnostic tool for the
+        early detection of Alzheimer’s.
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}

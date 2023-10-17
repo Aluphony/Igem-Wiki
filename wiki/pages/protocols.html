@@ -1,0 +1,414 @@
+{% extends "layout.html" %} {% block page_content %}
+<div>
+  <img
+    src="https://static.igem.wiki/teams/4838/wiki/dry-lab/dl-protocols.png"
+    class="background-img"
+    style="width: 100%;
+    height: 100%;"
+  />
+</div>
+<div class="wrapper-main">
+  <div class="main">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            Selection of Protein and Aptamer
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  For the respective proteins, We scavenge the RCSB Database for
+                  the Lactoferrin and Amyloid-Beta Protein Structures, Picking
+                  1LFG(Human Lactoferrin-Diferric) and 1IYT(Amyloid Beta -42,
+                  Monomeric) and 5KK3(Amyloid Beta-42, Fibril Structure)
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Aptamer for Lactoferrin obtained from iGEM repository, while a
+                  list of DNA-Aptamers for Amyloid beta obtained from Literature
+                  review.
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols1.png"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            Pre-Docking Processing
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  We obtain the 2-D structure of the DNA-Aptamers using the
+                  MFold Server.
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Inputting the files into the Xiao Lab web server to obtain the
+                  3-D structure of Protein in .pdb format.
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Using UCSF Chimera, we process the Protein and Aptamers, for
+                  removal of non-standard residues in the structures including
+                  ions, glycosides, and water molecules to prepare for docking.
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Saving the processed file in the .pdb format
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols2.png" alt="" style="width: 100%; height: 100%">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree"
+            aria-expanded="false"
+            aria-controls="flush-collapseThree"
+          >
+            Docking using HADDOCK 2.4
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  We perform Docking using HADDOCK 2.4 web server,
+                   selecting the option for Protein-Nucleic Acid docking, uploading the required input files
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  We select all residues for docking, and select the Centre of Mass restraint for docking,
+                   while keeping the default parameters.
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  The results for each Protein-DNA Aptamer docking is obtained in the form of Clusters associated with
+                   a HADDOCK Energy. Each cluster has 2-4 structures.
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Choosing the Cluster with lowest HADDOCK energy, and downloading all the structures 
+                   In .pdb format associated with the cluster for MD runs.
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols3.png" alt="" style="width: 100%; height: 100%">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour"
+            aria-expanded="false"
+            aria-controls="flush-collapseFour"
+          >
+            Generating Input Files for GROMACS MD-Simulation using CHARMM-GUI
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFour"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Using the Solution Builder tab on CHARMM-GUI web server, firstly inputting the docked 
+                  Protein-Aptamer structure obtained from HADDOCK, and manipulating the residues in case of any problems.
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols4.png" alt="" style="width: 100%; height: 100%">
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Then We in-silico generate a Rectangular WaterBox with edge distance of 10 Å, and add 0.15 M KCl in the solution,
+                   using the ion-placing method called Monte-Carlo, The Water Module used is TIP3
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  We generate the Crystal type Box(Cubic), with the parameters, now automatically generating grid information for PME FFT.
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Now we generate the Force Field files and input files for MD-Simulation, selecting CHARMM36m force field and GROMACS MD-software 
+                  for input files generation
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Equilibration  methodology used is NVT Ensemble and Dynamics methodology used is NPT Ensemble with Temperature: 303.15 K
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Download the zip file for, energy minimization, NVT and NPT input files along with a gromacs file of Protein-Aptamer in
+                   Solvation box along with topology file showing the coordinates of the atoms. 
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFive">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFive"
+            aria-expanded="false"
+            aria-controls="flush-collapseFive"
+          >
+            MD Simulation using GROMACS
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFive"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFive"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Firstly we determine the simulation time by changing the nsteps parameter in the above mentioned files,
+                   For Lactoferrin( 50 ns) and for Amyloid Beta-42(100 ns) have been determined.
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  Energy Minimization - The First step of the simulation with n_steps
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols5.png" alt="" style="width: 100%; height: 100%">
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols6.png" alt="" style="width: 100%; height: 100%">
+            </div>
+            
+            <div>
+              <p>Formula for nsteps:
+                nsteps * timestep (ps/step) = 1000 * x ps = x ns</p>
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  <b>NVT Equilibration</b> - Nsteps according to the Simulation Time
+
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols7.png" alt="" style="width: 100%; height: 100%">
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols8.png" alt="" style="width: 100%; height: 100%">
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  <b>NPT Dynamics</b> 
+
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols9.png" alt="" style="width: 100%; height: 100%">
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols10.png" alt="" style="width: 100%; height: 100%">
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  <b>MD Run Final</b> 
+
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols11.png" alt="" style="width: 100%; height: 100%">
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols12.png" alt="" style="width: 100%; height: 100%">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSix">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSix"
+            aria-expanded="false"
+            aria-controls="flush-collapseSix"
+          >
+          Post-Simulation Analysis
+          </button>
+        </h2>
+        <div
+          id="flush-collapseSix"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingSix"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  <b>Recentring and Re-wrapping the coordinates -</b>
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols13.png" alt="" style="width: 100%; height: 100%">
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  <b>RMSD Calculation -</b>
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols14.png" alt="" style="width: 100%; height: 100%">
+            </div>
+            
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  <b>RMSF Calculation -</b>
+
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols15.png" alt="">
+            </div>
+            
+            </div>
+            <div class="paragraph">
+              <ul>
+                <li style="list-style: disc">
+                  <b>H-Bonds Calculation -</b> 
+
+                </li>
+              </ul>
+            </div>
+            <div class="images">
+              <img src="https://static.igem.wiki/teams/4838/wiki/protocols/protocols16.png" alt="">
+            </div>
+          
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

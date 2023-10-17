@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"
+    />
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="{{ url_for('static', filename = 'bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link
+      href="{{ url_for('static', filename = 'style.css') }}"
+      rel="stylesheet"
+    />
+
+    <title>{% block title %}{% endblock %} | IIT-Roorkee - iGEM 2023</title>
+  </head>
+
+  <body style="background-color: #fff0f3">
+    <!-- Navigation -->
+    <nav>
+      <div class="position-absolute home-navbar">
+        <div class="logo">NEURA<span style="color: #ffa6a7">SENSE</span></div>
+        <div class="navbar-items">
+          <ul class="nav-ul">
+            <li>
+              <a class="nav-link">People</a>
+              <ul class="sub-nav">
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='team') }}"
+                    >Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='attributions') }}"
+                    >Attributions</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="nav-link">Project</a>
+              <ul class="sub-nav">
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='description') }}"
+                    >Description</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='problem') }}"
+                    >Problem</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='solution') }}"
+                    >Solution</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='implementation') }}"
+                    >Implementation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='engineering') }}"
+                    >Engineering</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='contribution') }}"
+                    >Contribution</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="nav-link">Human Practices</a>
+
+              <ul class="sub-nav">
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='overview-hp') }}"
+                    >Overview</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='education') }}"
+                    >Education</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='human-practices') }}"
+                    >Integrated HumanPractices</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="nav-link">Wetlab</a>
+              <ul class="sub-nav">
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='overview-wet') }}"
+                    >Overview</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='protocols-wet') }}"
+                    >Protocols</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='results-wet') }}"
+                    >Results</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='safety-wet') }}"
+                    >Safety</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='proof-wet') }}"
+                    >Proof of concept</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="nav-link">Drylab</a>
+              <ul class="sub-nav">
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='overview-dry') }}"
+                    >Overview</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='protocols') }}"
+                    >Protocols</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='docking') }}"
+                    >Docking</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='molecular') }}"
+                    >Molecular Dynamics</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='simulation') }}"
+                    >Simulation Analysis</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link sub-items"
+                    href="{{ url_for('pages', page='model') }}"
+                    >Model</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="nav-link" href="{{ url_for('pages', page='judges') }}"
+                >Judges</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <section class="home-section">
+      <div class="home-content">
+        <div class="home-upper">
+          <div class="home-left">
+            <div class="home-para">
+              A Rapid, Sensitive, Easy to use aptamer <br />
+              based diagnostic kit for detection of
+            </div>
+            <div class="home-heading">Alzheimer's</div>
+            <div>
+              <button class="home-btn1">Explore More</button>
+              <button class="home-btn2">View Project</button>
+            </div>
+          </div>
+          <div class="home-right">
+            <div class="brain">
+              <img
+                src="https://static.igem.wiki/teams/4838/wiki/home/home2.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="home-down">
+          <img
+            src="https://static.igem.wiki/teams/4838/wiki/home/home/frame-84.png"
+            alt=""
+            style="width: 100%; height: 100%"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="section home-section2">
+      <div class="upper">PREVALENCE IN INDIA</div>
+      <div class="lower">
+        <div class="lower-left">
+          <video
+            alt="video is here"
+            width="400"
+            height="400"
+            autoplay
+            loop
+            muted
+          >
+          <source src="{{ url_for('static', filename='home.mp4') }}" type="video/mp4">
+          </video>
+        </div>
+        <div class="lower-right">
+          <img
+            src="https://static.igem.wiki/teams/4838/wiki/frame-164.png"
+            alt=""
+            width="450px"
+            height="300px"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section3">
+      <div class="home3-upper">
+        <div class="problem">the problem</div>
+        <div class="home-p">
+          The existing methods for diagnosis of Alzheimer’s <br />
+          Disease are not perfect and have a lot of problems.
+        </div>
+      </div>
+      <div class="home3-down">
+        <div class="down-left">
+          <img
+            src="https://static.igem.wiki/teams/4838/wiki/home/group-130.png"
+            alt=""
+            style="width: 100%"
+          />
+        </div>
+        <div class="down-right">
+          <div class="box1">
+            <div class="sub-box1-left">use of csf sample</div>
+            <div class="sub-box1-right">need trained professionals</div>
+          </div>
+          <div class="box2">
+            <div class="box2-left">
+              <div class="sub-box2-left">
+                Lack of awareness leading to delayed diagnosis
+              </div>
+            </div>
+            <div class="box2-right">
+              <div class="sub-box2-right1">inaccessible</div>
+              <div class="sub-box2-right2">costly</div>
+            </div>
+          </div>
+          <div class="box3">
+            <div class="sub-box3">No cure, only palliative care</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section4">
+      <div class="sub-section4">
+        <div class="heading section4-head" style="margin-bottom: 0">
+          Our solution
+        </div>
+        <div class="paragraph sub-p">
+          Our kit works using a simple non invasive <b>salivary sample</b>. This
+          itself makes the kit much more affordable and accessible instead of
+          traditional diagnostic methods requiring a CSF sample.
+        </div>
+        <div class="paragraph sub-p">
+          The saliva contains several <b>biomarkers</b> for Alzheimer’s disease.
+          Through literature review we found that beta amyloid and lactoferrin
+          could be used as potential biomarkers for detection. The levels of
+          these protein biomarkers can be detected by the use of specific DNA
+          <b>aptamers</b> which can bind to these proteins.
+        </div>
+        <div class="paragraph sub-p">
+          In-silico modification can be achieved through molecular simulation
+          and docking studies of the existing selex constructed aptamers
+          increase binding. These aptamers are immobilised on a gold electrode.
+          The binding of protein and DNA aptamer casues a conformational change
+          leading to an <b>electric signal</b>.
+        </div>
+        <div class="paragraph sub-p">
+          This signal is quantified and amplifed with the help of a potentiostat
+          to increase ease of use. Bluetooth can be used to send the results in
+          a user friendly readable format to our smartphones.
+        </div>
+      </div>
+    </section>
+    <section class="section5">
+      <div class="last">
+        <div class="last-heading">Working Animation</div>
+        <div class="video">
+          <a
+            href="https://uploads.igem.org/teams/4838/videos/project-promotion/IIT-Roorkee/c043c115-1858-40c4-865f-f0666833a8fb"
+            ><img
+              src="https://static.igem.wiki/teams/4838/wiki/home/photovid.png"
+              alt=""
+              style="width: 100%"
+          /></a>
+        </div>
+      </div>
+    </section>
+    <video id="v0" tabindex="0" autobuffer preload>
+      <source
+        src="{{ url_for('static', filename='bottomside.mp4') }}"
+        type="video/mp4"
+      />
+      type="video/mp4" Your browser does not support the video tag.     
+    </video>
+    <script>
+      var vid = document.getElementById("v0");
+
+      // Pause video on load
+      vid.pause();
+
+      // Pause video on document scroll (stops autoplay once scroll started)
+      window.onscroll = function () {
+        vid.pause();
+      };
+
+      // Refresh video frames on an interval for smoother playback
+      setInterval(function () {
+        vid.currentTime = window.pageYOffset / 400;
+      }, 40);
+    </script>
+    {% include 'footer.html' %}
+  </body>
+</html>

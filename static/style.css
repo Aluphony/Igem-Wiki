@@ -1,0 +1,1510 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+.bd-callout {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e9ecef;
+  border-left-width: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.bd-callout h4 {
+  margin-bottom: 0.25rem;
+}
+
+.bd-callout p:last-child {
+  margin-bottom: 0;
+}
+
+.bd-callout code {
+  border-radius: 0.25rem;
+}
+
+.bd-callout+.bd-callout {
+  margin-top: -0.25rem;
+}
+
+.bd-callout-info {
+  border-left-color: #5bc0de;
+}
+
+.bd-callout-warning {
+  border-left-color: #f0ad4e;
+}
+
+.bd-callout-danger {
+  border-left-color: #d9534f;
+}
+
+/* footer */
+footer a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* background: #fff0f3; */
+  /* background: #FFD6DE; */
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.background-img {
+  width: 100%;
+  height: 90vh;
+  margin-top: 5rem;
+}
+
+.home-btn1 {
+  border-radius: 2.61213rem;
+  background: #FFD7E0;
+  color: #7D0064;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  padding: .675rem;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+
+}
+
+.home-btn2 {
+  border-radius: 2.61213rem;
+  border: 3px solid #FFD7E0;
+  color: #FFD7E0;
+  background: transparent;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: .675rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.home-img {
+  width: 100vh;
+  max-height: fit-content;
+}
+
+.home-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: start;
+
+}
+
+.home-section {
+  background-image: url(https://static.igem.wiki/teams/4838/wiki/home/home/desktop-14-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 7rem;
+  border-bottom-right-radius: 7rem;
+  height: max-content;
+}
+
+.home-content {
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  padding-top: 14rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brain {
+  width: 100%;
+  max-width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-upper {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.home-down {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.home-section2 {
+  background-image: url("https://static.igem.wiki/teams/4838/wiki/home/frame-92.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.upper {
+  margin-top: 8rem;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  background: var(--highlight, linear-gradient(90deg, #822A6F 0%, #DF3343 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 4rem;
+}
+
+.lower {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+
+/* .lower-left{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  } */
+.home-section3 {
+  background-image: url("https://static.igem.wiki/teams/4838/wiki/home/desktop-32.png");
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 8rem;
+  gap: 8rem;
+}
+
+.home3-upper {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10rem;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home3-down {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  justify-content: space-around;
+  margin-bottom: 10rem;
+}
+
+.down-right {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 1rem;
+}
+
+.box1 {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 1rem;
+}
+
+.sub-box1-left {
+  background-color: #FFF0F3;
+  width: 169px;
+  padding: 26px 16.085px 19px 17.086px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #BB2C51;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.sub-box1-right {
+  background-color: #fff0f3;
+  display: flex;
+  width: 12.9375rem;
+  height: 8.625rem;
+  padding: 3.125rem 1.42019rem 2.5rem 1.42019rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #BB2C51;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 10px;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.box2-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sub-box2-left {
+  display: flex;
+  width: 19.0625rem;
+  height: 10.6875rem;
+  padding: 3.09375rem 2.64306rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  background: #FFF0F3;
+  color: #BB2C51;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.sub-box2-right1 {
+  width: 12.735rem;
+  display: inline-flex;
+  height: 5.8125rem;
+  padding: 0rem 2.4375rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  background: #FFF0F3;
+  color: #BB2C51;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.sub-box2-right2 {
+  display: flex;
+  width: 12.9375rem;
+  height: 3.375rem;
+  padding: 0.9375rem 1.41994rem 0.9375rem 1.42044rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  background: #FFF0F3;
+  color: #BB2C51;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.box3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-box3 {
+  display: flex;
+  width: 21.6875rem;
+  height: 4.75rem;
+  padding: 1.625rem 1.68163rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  background: #FFF0F3;
+  color: #BB2C51;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.home-p {
+  color: #FFF0F3;
+  font-family: 'Montserrat';
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  /* 1.95rem */
+  letter-spacing: 0.03rem;
+}
+
+.problem {
+  color: #FFD7E0;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.home-section4 {
+  background-image: url("https://static.igem.wiki/teams/4838/wiki/home/back-4.png");
+  background-position: center center;
+  /* background-attachment: fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4rem;
+}
+
+.sub-section4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3rem;
+  width: 50%;
+  /* margin-left: 5rem; */
+}
+
+.section4-head {
+  font-family: 'Montserrat';
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800 !important;
+  line-height: normal;
+  text-transform: uppercase;
+  background: var(--highlight, linear-gradient(90deg, #822A6F 0%, #DF3343 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sub-p {
+  color: #730030 !important;
+  font-family: 'Montserrat';
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 130%;
+  /* 1.625rem */
+  letter-spacing: 0.025rem;
+  background: linear-gradient(90deg, #822A6F 66.23%, #DF3343 91.4%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0.025rem;
+}
+
+.section5 {
+  background-image: url("https://static.igem.wiki/teams/4838/wiki/home/desktop-33.png");
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 4rem;
+  padding: 4rem;
+
+}
+
+.last {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+.last-heading {
+  color: #FFD6E8;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  mix-blend-mode: luminosity;
+}
+
+.video>img {
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.bg::after {
+  display: block;
+  position: relative;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+  margin-top: -150px;
+  height: 150px;
+  width: 100%;
+  content: '';
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.top-navbar {
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-around;
+  gap: 1rem;
+  background: linear-gradient(90deg, #701463 0%, #E03443 100%);
+}
+
+.home-navbar {
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-around;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.logo {
+  color: #f6f5f5;
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.nav-ul>li>a {
+  color: #f6f5f5;
+}
+
+.sub-nav {
+  display: none;
+  position: absolute;
+  border-radius: 0.625rem;
+  background: linear-gradient(112deg, rgba(255, 255, 255, 0.60) 9.83%, rgba(255, 255, 255, 0.25) 83.55%);
+  stroke-width: 5px;
+  stroke: #E4F9FF;
+  filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
+  backdrop-filter: blur(20px);
+}
+
+.navbar-items ul li {
+  position: relative;
+
+}
+
+.navbar-items ul li:hover .sub-nav {
+  display: unset;
+  width: max-content;
+
+  backdrop-filter: blur(20px);
+  left: 1rem;
+}
+
+.nav-items {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+/* content sides */
+
+.wrapper-main {
+  display: flex;
+  gap: 5rem;
+  margin-top: 2.5rem;
+  align-items: start;
+  align-self: center;
+}
+
+.left-side {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  text-align: left;
+  /* max-width: 250px; */
+  padding-top: 1.5rem;
+  margin-left: 2rem;
+}
+
+.heading-nav {
+  color: #000;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.side-items {
+  color: #ABA7A7;
+  font-family: 'Montserrat' sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 50ms ease-in-out;
+}
+
+.side-items:hover {
+  color: #000;
+  transition: all 50ms ease-in-out;
+  /* text-decoration: underline; */
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.right-side {
+  margin-right: 4rem;
+  margin-left: 2rem;
+}
+
+/* .active{
+    color: #333 !important;
+      font-weight: 500;
+      list-style-type: inside;
+  } */
+
+.p-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading {
+  background: var(--highlight,
+      linear-gradient(90deg, #822a6f 0%, #df3343 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.1rem;
+  font-style: normal;
+  font-weight: 500;
+  /* line-height: normal; */
+  margin-bottom: 1.275rem;
+}
+
+.paragraph {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+.paragraph2 {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.images {
+  width: 30rem;
+  height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+
+}
+
+.images>img {
+  border-radius: 1rem;
+}
+
+.footer-pro {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  justify-content: space-evenly;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem;
+  background: #fff0f3;
+
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-right: 3rem;
+  margin-left: 2rem;
+}
+
+.igem {
+  color: #892b6d;
+  font-family: Stratos;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.99963rem;
+  /* 49.981% */
+}
+
+.address {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.iit {
+  color: #c3597a;
+  font-family: Stratos;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 1.3rem */
+  letter-spacing: 0.02rem;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.home-para {
+  color: #ffd7e0;
+  font-family: Montserrat;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.home-heading {
+  color: #ffd7e0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5.61156rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* width: 60%; */
+  margin: auto;
+}
+
+#v0 {
+  position: fixed;
+  bottom: 2rem;
+  right: 0;
+  width: 5rem;
+  height: 3rem;
+  background: transparent;
+}
+
+.footer-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact {
+  color: #892b6d;
+  font-family: Stratos;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.98438rem;
+  /* 78.75% */
+}
+
+.mail {
+  color: #c3597a;
+  font-family: Stratos;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.98438rem;
+  /* 98.438% */
+}
+
+.follow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.follow-div {
+  color: #892b6d;
+  font-family: Stratos;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-upper {
+  color: #892b6d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.footer-links {
+  color: #c3597a;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.99963rem;
+  /* 99.961% */
+}
+
+.footer-links:hover {
+  color: #333;
+}
+
+.sub-items {
+  /* opacity: 1;
+  background: url(https://static.igem.wiki/teams/4838/wiki/rectangle.png), lightgray 0% 0% / 100px 100px repeat;
+  mix-blend-mode: overlay; */
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+}
+.brain>img {
+  width: 130%;
+}
+.sub-items:hover {
+  color: #000;
+  opacity: 1;
+  transition: all 50ms ease-in-out;
+  flex-grow: 1;
+  /* background: white; */
+}
+
+/* media queries */
+
+@media(max-width:950px) {
+  .background-img {
+    height: 80vh;
+  }
+
+  .nav-ul {
+    gap: 0;
+  }
+
+  .wrapper-main {
+    gap: 2.5rem;
+  }
+
+  .footer-pro {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  
+  .footer-left {
+    align-items: center;
+  }
+
+  .images {
+    margin-bottom: .75rem;
+  }
+
+  .p-img {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .lower-left {
+    width: 300px;
+  }
+
+  .lower-right>img {
+    /* width: 100%; */
+    width: 300px;
+  }
+
+  .lower {
+    gap: 6rem;
+  }
+
+  .home-heading {
+    font-size: 4rem;
+  }
+
+  .home-para {
+    font-size: 1.2rem;
+  }
+}
+
+@media(max-width:760px) {
+  .nav-ul {
+    display: none;
+  }
+
+  .home-content {
+    padding-top: 8rem;
+  }
+
+  .home-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .background-img {
+    height: 60vh;
+  }
+
+  .left-side {
+    display: none;
+  }
+
+  .top-navbar {
+    justify-content: center;
+  }
+
+  .right-side {
+    width: 90%;
+    margin: auto;
+  }
+
+  .heading {
+    width: 95%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media(max-width:580px) {
+  .footer-top {
+    display: none;
+  }
+
+  .background-img {
+    height: 50vh;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .section {
+    gap: 0;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .images {
+    width: 20rem;
+    height: 77%;
+    margin-bottom: .5rem;
+  }
+}
+
+@media(max-width:430px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .images {
+    width: 20rem;
+    height: 77%;
+  }
+
+  .paragraph {
+    font-size: .8rem;
+    line-height: 1.5rem;
+  }
+
+  .top-navbar {
+    padding: 0%;
+  }
+
+  .main-building {
+    width: 100%;
+  }
+
+  .footer-left {
+    margin-left: 2rem;
+  }
+
+  .images>img {
+    width: 95%;
+    margin-bottom: .4rem;
+  }
+
+  .background-img {
+    margin-top: 3rem;
+  }
+}
+
+@media(max-width:350px) {
+  .main-building {
+    width: 100%;
+  }
+}
+
+
+/* media queries for the home page */
+@media(max-width:1024px) {
+  .home-section3 {
+    gap: 4rem;
+    width: 100%;
+  }
+
+  .sub-box2-right2 {
+    width: 10rem;
+  }
+
+  .sub-box2-right1 {
+    width: 10rem;
+  }
+
+  .lower-right {
+    width: 100%;
+  }
+}
+
+
+/* accordian */
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#accordionFlushExample {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.accordion-button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: #ffe8ee;
+  color: #c3597a;
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  margin-left: auto;
+  content: "";
+  
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform .2s ease-in-out;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("https://static.igem.wiki/teams/4838/wiki/protocols/arrowup.png");
+  transform: rotate(180deg);
+}
+
+.accordion-button:not(.collapsed) {
+  color: #c3597a;
+  background-color: #ffe8ee;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  outline: 0;
+  border-color: #ffe8ee;
+  box-shadow: none !important;
+}
+
+.accordion-item {
+  padding: 1rem;
+  width: 720px;
+  background: #ffe8ee;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.accordion-list {
+  list-style: circle !important;
+}
+
+
+/* team */
+
+
+.heading-team {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  background: var(--highlight, linear-gradient(90deg, #822A6F 0%, #DF3343 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.home-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.profile-card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  ;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: -5px 8px 45px rgba(51, 51, 51, 0.126);
+  transition: all .4s ease-in-out;
+  margin: auto;
+}
+
+.profile-card:hover {
+  border-radius: 10px;
+  height: 260px;
+}
+
+.profile-card .img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-card:hover img {
+  border-radius: 10px;
+  transform: translateY(-70px);
+}
+
+.img img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: all .4s;
+  z-index: 99;
+}
+.head{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+.img2{
+  object-fit: fill;
+  width: 300px;
+  height: auto;
+  z-index: 99; 
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border: white;
+
+
+}
+.caption {
+  text-align: center;
+  transform: translateY(-90px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s;
+}
+
+.profile-card:hover .caption {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.caption h3 {
+  font-size: 16px;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.paragraph > ul > li >a{
+  color: #000;
+  text-decoration: underline;
+}
+.buttons {
+  margin-top: 4rem;
+display: flex;
+justify-content: center;
+align-items: center;
+gap:7px;
+border: none;
+width: 100%;
+}
+ .button1 {
+  padding: 1rem;
+  border-top-left-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+  border: none;
+  background: #C83396;
+  color: #FFF;
+text-align: center;
+font-family: 'Montserrat';
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 140.396%; /* 0.96525rem */
+}
+.button2{
+  color: #C83396;
+  padding: 1rem;
+  border: none;
+text-align: center;
+font-family: 'Montserrat';
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 140.396%; /* 0.96525rem */
+}
+.button3{
+  color: #C83396;
+  padding: 1rem;
+  border-top-right-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  border: none;
+text-align: center;
+font-family: 'Montserrat';
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 140.396%; /* 0.96525rem */
+}
+.nav-link{
+  font-family: 'Montserrat';
+}
+
+.caption p {
+  font-size: 10px;
+  font-weight: 500;
+  margin: 2px 0 12px 0;
+}
+.main-container{
+  width: 100%;
+  height: 100%;
+}
+@media(max-width:960px) {
+  .profile-card {
+    width: 300px;
+    height: 300px;
+  }
+
+  .home-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+@media(max-width:760px){
+  .accordion-item{
+    width: 550px;
+  }
+  .accordion-button{
+    font-size: 1rem;
+  }
+}
+@media(max-width:600px){
+  .accordion-item{
+    width: 500px;
+  }
+}
+
+@media(max-width:530px) {
+  .profile-card {
+    width: 320px;
+    height: 320px;
+  }
+  .accordion-item{
+    width: 400px;
+  }
+
+  .home-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+
+  .heading-team {
+    font-weight: 400;
+  }
+}
+
+@media(max-width:400px){
+  .accordion-item{
+    width: 300px;
+  }
+}
+
+
+/* media queries for homepage */
+
+@media(max-width:760px){
+  .home-left{
+    align-items: center;
+  }
+  .home-upper{
+    flex-direction: column-reverse;
+  }
+  .upper{
+    font-size: 3rem;
+  }
+  .lower{
+    display: flex;
+    flex-direction: column;
+  }
+  .lower-right{
+    width: 60%;
+  }
+  .lower-left{
+    width: 300px;
+    height: 300px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+
+  }
+  .lower-right>img {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .down-left{
+    display: none;
+  }
+  .home-section3{
+    border-radius: 0 !important;
+  }
+  .sub-section4{
+    width: 100%;
+  }
+  .section5{
+    border-radius: 0 !important;
+  }
+  .last{
+    flex-direction: column;
+  }
+}
+
+@media(max-width:530px){
+  .brain > img{
+    width: 100%;
+  }
+  .home-heading {
+    font-size: 2rem;
+}
+  
+
+
+.home3-upper{
+  flex-direction: column;
+}
+.home-para {
+  font-size: 1rem;
+}
+.lower-left >video {
+   width: 200px;
+}
+.box1{
+  flex-direction: column;
+}
+.sub-box1-left{
+  width: 100%;
+}
+.sub-box1-right{
+  width: 100%;
+}
+.box2{
+  display: flex;
+  flex-direction: column;
+}
+.sub-box2-left{
+  width: 100%;
+}
+.sub-box2-right1{
+  width: 100%;
+}
+.sub-box2-right2{
+  width: 100%;
+}
+.box3{
+  display: flex;
+  flex-direction: column;
+}
+.sub-box3{
+  width: 100%;
+}
+.lower-right {
+  width: 100%;
+}
+.last-heading{
+  font-size: 3rem;
+}
+.upper{
+  font-size: 2rem;
+}
+}
